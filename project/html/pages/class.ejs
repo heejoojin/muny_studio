@@ -1,0 +1,86 @@
+<html lang="en">
+<head>
+    <% include ../helpers/head %>
+    <link rel="stylesheet" href="css/class.css">
+</head>
+<body class="container">
+  <main>
+    <section class="sec1">
+      <div class="box1">
+        <div class="menu">
+          <% include ../helpers/menu %>
+        </div>
+        
+        <div class="home">
+          <div class="box1-1">
+            <h1>&bull; muny pottery studio &bull;</h1>
+            <!--<h1 id="greeting"></h1>
+            <h1 id="en">Welcome to MUNY Studio :)<br/>
+            Muddy hands make beautiful art 
+            <i class="fa fa-heart" id="heart" aria-hidden="true">
+            <br/>enjoy getting dirty with us !</h1>-->
+          </div>
+
+          <div class="box1-3" id="class">
+            <h1 id="title">classes and workshops</h1>
+            <ul>
+              <li>
+                <div class="gallery">
+                  <img class="img" src="images/handbuilding.png" alt="">
+                  <div class="desc"><p>hand building</p></div>
+                </div>
+                
+                <div id="classdesc">
+                  <p><span id="classname">Hand Building Class</span>
+                  <br/>weekly over 8 consecutive sessions</p>
+                  <button id="register"><a href="#box1-2">Register for this Class</a></button>
+                </div>
+              </li>
+                  
+              <li>
+                <div class="gallery">
+                  <img class="img" src="images/wheel.png" alt="">
+                  <div class="desc"><p>wheel-throwing</p></div>
+                </div>
+                
+                <div id="classdesc">
+                  <p><span id="classname">Pottery on the Wheel Class</span>
+                  <br/>weekly over 8 consecutive sessions</p>
+                  <button id="register"><a href="#box1-2">Register for this Class</a></button>
+                </div>
+              </li>
+              
+              <li>
+                <div class="gallery">
+                  <img class="img" src="images/couple.png" alt="">
+                  <div class="desc"><p>with 
+                  <i class="fa fa-heart" id="heart" aria-hidden="true"></i></p></div>
+                </div>
+
+                <div id="classdesc">
+                  <p><span id="classname">Pottery Date Night</span>
+                  <br/>one day workshop with your partner 
+                  <i class="fa fa-heart" id="heart" aria-hidden="true"></i></p>
+                  <button id="register"><a href="#box1-2">Register for this Class</a></button>
+                </div>
+            </li>
+          </ul>
+        </div> <!--box1-3-->
+
+        <div class="box1-2" id="box1-2">
+            <h1><i class="fas fa-chevron-down"></i><br/><br/>registeration</h1>
+            <p id="registeration"></p>
+        </div>
+      </div> <!--home-->
+    </div> <!--box1-->
+  </section>
+  <script src="js/classregisteration.js"></script>
+  
+  <section class="copyright">
+    <div id="cr">
+      <p>Copyright &copy; 2019 Muny Pottery Studio. All rights reserved.</p>
+    </div>
+  </section>
+</main>
+</body>
+</html>

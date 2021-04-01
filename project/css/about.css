@@ -1,0 +1,11 @@
+.box1-3 {
+	text-align: center;
+}
+.artist img {
+	padding: 0;
+	margin-left: auto;
+  	margin-right: auto;
+  	width: 500px;
+  	float: none;
+  	margin-bottom: 50px;
+}

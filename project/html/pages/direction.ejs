@@ -1,0 +1,119 @@
+<html lang="en">
+<head>
+    <% include ../helpers/head %>
+    <style>
+      #map {
+        width: 350px;
+        height: 350px;
+        margin: 0;
+        padding: 0;
+        float: left;
+        border-radius: 25px;
+        border: 3px dotted #d4bfaa;
+      }
+      #box1-3-1, #box1-3-2 {
+        width: 50%;
+        float: left;
+        margin-top: 30px;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+      #box1-3-1 {
+        text-align: right;
+        padding-right: 50px;
+        margin-top: 100px;
+      }
+      #box1-3-2 {
+        float: right;
+      }
+    </style>
+</head>
+<body class="container">
+  <main>
+      <section class="sec1">
+          <div class="box1">
+          <div class="menu">
+            <% include ../helpers/menu %>
+          </div>
+          <div class="home">
+            <div class="box1-1">
+              <h1>&bull; muny pottery studio &bull;</h1>
+              <!--<h1 id="greeting"></h1>
+              <h1 id="en">Welcome to MUNY Studio :)<br/>
+              Muddy hands make beautiful art 
+              <i class="fa fa-heart" id="heart" aria-hidden="true">
+              </i><br/>enjoy getting dirty with us !</h1>-->
+            </div>
+            <div class ="box1-3">
+              <h1>find us</h1>
+              <div id="box1-3-1">
+                <p>Gijang&ndash;eup, Gijang&ndash;gun,<br/>Busan, South Korea
+                <br/>&plus;8210&ndash;5610&ndash;1754</p>
+              </div>
+              <div id="box1-3-2">
+                  <div id="map">
+                    <h1>google map is currently being updated</h1>
+                    <style>
+                      #map h1 {
+                        padding-top: 120px;
+                      }
+                    </style>
+                      <script async defer src="https://maps.googleapis.com/maps/api/js?key=<%= process.env.Google_Map %>&callback=initMap"
+                      type="text/javascript"></script>
+                  </div>
+              </div>
+              <script>
+                var CustomMapStyles = [
+    {
+        "featureType": "administrative",
+        "elementType": "labels",
+        "stylers": [
+            {
+                "visibility": "on"
+            },
+            {
+                "gamma": "1.82"
+            }
+        ]
+    },
+    {
+        "featureType": "administrative",
+        "elementType": "labels.text.fill",
+        "stylers": [
+            {
+                "visibility": "on"
+            },
+            {
+                "gamma": "1.96"
+            },
+            {
+                "lightness": "-9"
+            }
+        ]
+    },
+    {
+        "featureType": "administrative",
+        "elementType": "labels.text.stroke",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    }
+];
+</script>
+          </div>
+        </div>
+        </div>
+        <script src="js/direction.js"></script>
+        </section>
+        <section class="copyright">
+          <div id="cr">
+            <p>Copyright &copy; 2019 Muny Pottery Studio. All rights reserved.</p>
+          </div>
+        </section>
+  </main>
+
+</body>
+</html>

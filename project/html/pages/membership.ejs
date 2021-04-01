@@ -1,0 +1,55 @@
+<html lang="en">
+<head>
+    <% include ../helpers/head %>
+    <link rel="stylesheet" href="css/membership.css">
+    
+</head>
+<body class="container">
+  <main>
+      <section class="sec1">
+          <div class="box1">
+          <div class="menu">
+            <% include ../helpers/menu %>
+          </div>
+          <div class="home">
+            <div class="box1-1">
+              <h1>&bull; muny pottery studio &bull;</h1>
+              <!--<h1 id="greeting"></h1>
+              <h1 id="en">Welcome to MUNY Studio :)<br/>
+              Muddy hands make beautiful art 
+              <i class="fa fa-heart" id="heart" aria-hidden="true">
+              <br/>enjoy getting dirty with us !</h1>-->
+            </div>
+            <div id="click"></div>
+            <div class ="box1-3" id="click">
+              <script src="js/click.js"></script>
+              <h1 id="title">become a member and join our clay community !</h1>
+              <form method="post" id="signup" action="https://munystudio.herokuapp.com">
+
+                <label for="username" id="username">Create Username</label>
+                <input type="text" id="usernameinput"/>
+                <div id="warning">
+                </div>
+
+                <label for="password" id="password">Create Password</label>
+                <input type="password"/><br/>
+
+                <button type="button" id="signupbtt">Sign up</button>
+              </form>
+
+              <p id="question">already a member ?</p>
+              <button id="signin" type="button" onClick="toggleLogIn()">Sign in</button><br/>
+              <button id="google" type="button" onclick="toggleSignIn()"></button>
+          </div>
+        </div>
+        </div>
+        <script src="js/membership.js"></script>
+        </section>
+        <section class="copyright">
+          <div id="cr">
+            <p>Copyright &copy; 2019 Muny Pottery Studio. All rights reserved.</p>
+          </div>
+        </section>
+      </main>
+</body>
+</html>
