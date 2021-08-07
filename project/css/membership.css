@@ -69,27 +69,25 @@ form {
 
 
 /* ----------------------- */
-#note {
+.popup {
   color: #534b46;
   background-color: #665644;
   opacity: 0.9;
   /*box-shadow: -3px 3px 6px #000;*/
-  border-style: 
   padding: 0;
   padding-bottom: 40px;
-  right: 0;
-  left: 0;
   margin-left: auto;
   margin-right: auto;
-  min-width: 1000px;
-  max-width: 100%;
+  min-width: 500px;
+  max-width: 50%;
   position: absolute;
-  top: 0;
+  top: 100;
+  float: center;
   border: 3px dotted #d4bfaa;
   border-radius: 15px;
 }
 
-#note .header + div {
+.popup #popup-head + div {
   /*background: rgb(255, 255, 255);
   /*background: rgba(255, 255, 255, 1);*/
   background: white;
@@ -104,18 +102,7 @@ form {
   border-radius: 15px;
 }
 
-#note h2 {
-  color: #534b46;
-  padding: 0;
-  margin: 0;
-  margin-bottom: 20px;
-}
-
-#note a {
-  text-decoration: none;
-  color: #fff;}
-
-#note .header {
+.popup #popup-head {
   text-align: right;
   background-color: #665644;
   padding: 0;
@@ -123,12 +110,20 @@ form {
   border-radius: 15px;
 }
 
-#close h2 {
-    color: white;
+.popup h2 {
+  color: #534b46;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 20px;
 }
 
-.shown {
-  visibility: visible;}
+#popup-close {
+  color: white;
+}
 
-.hidden {
-  visibility: hidden;}
+/*.popup a {
+  text-decoration: none;
+  color: #fff;
+}*/
+
+
