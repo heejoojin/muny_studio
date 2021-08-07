@@ -5,6 +5,8 @@ function addToCart() {
     
     if (!hasPopped && !firebase.auth().currentUser) {
         hasPopped = true;
+        $('#google').attr("disabled", false);
+
         var msg = '<div id="popup-head"><a id="popup-close" href=""><h2>&#10005;<h2></a></div>';
         msg += '<div><h2>Google log-in is required for class registeration!</h2>';
         
@@ -16,6 +18,7 @@ function addToCart() {
         function closePopup() {                          // Declare function
           document.body.removeChild(popup);              // Remove the note
           hasPopped = false;
+          $('#google').attr("disabled", true);
         }
 
         var close = document.getElementById('popup-close');   // Get the close button
