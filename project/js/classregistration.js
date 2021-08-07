@@ -1,24 +1,26 @@
 var count = 0;
+var hasPopped = false;
 
 function addToCart() {
-    // Create the HTML for the message
-    var popup = false;
-    var msg = '<div id="popup-head"><a href="#"><h2 id="popup-close">&#10005;<h2></a></div>';
-    msg += '<div><h2>This Membership Webpage is Currently Under Construction</h2>';
-    msg += 'we are in the process of updating sign&ndash;up and sing&ndash;in functionality!<br/>';
-    msg += 'we recommend you to use your google account to join our membership :)<br/>thank you so much for your understanding <i class="fa fa-heart" id="heart" aria-hidden="true"></i></div>';
+    
+    if (!hasPopped && !firebase.auth().currentUser) {
+        hasPopped = true;
+        var msg = '<div id="popup-head"><a id="popup-close" href="#"><h2 style="color: white;">&#10005;<h2></a></div>';
+        msg += '<div><h2>Google log-in is required for class registeration!</h2>';
+        
+        var popup = document.createElement('div');       // Create a new element
+        popup.setAttribute('class', 'popup');                // Add an id of note
+        popup.innerHTML = msg;                           // Add the message
+        document.body.appendChild(popup);                // Add it to the page
 
-    var elNote = document.createElement('div');       // Create a new element
-    elNote.setAttribute('class', 'popup');                // Add an id of note
-    elNote.innerHTML = msg;                           // Add the message
-    document.body.appendChild(elNote);                // Add it to the page
+        function closePopup() {                          // Declare function
+          document.body.removeChild(popup);              // Remove the note
+          hasPopped = false;
+        }
 
-    function dismissNote() {                          // Declare function
-      document.body.removeChild(elNote);              // Remove the note
+        var close = document.getElementById('popup-close');   // Get the close button
+        close.addEventListener('click', closePopup, false);// Click close-clear note
     }
-
-    var elClose = document.getElementById('close');   // Get the close button
-    elClose.addEventListener('click', dismissNote, false);// Click close-clear note
 }
 
 // $(document).ready(function() {
