@@ -69,6 +69,8 @@ window.onload = function() {
       var name = user.displayName;
       $('#google').html('<i class="fab fa-google-plus"></i> Sign out');
       $('#google').css('background-color','#ecdece');
+      $('#cart').html('0','#ecdece');
+      $('#cart').css('background-color','#ecdece');
       initializeStreamListener();
     } else {
       $('#google').html('<i class="fab fa-google-plus"></i> Sign in with Google');
@@ -78,13 +80,13 @@ window.onload = function() {
   });
 };
 
-function updateCart() {
-  firebase.database().ref('users/' + userId).set({
-    username: name,
-    email: email,
-    profile_picture : imageUrl
-  });
-}
+// function updateCart() {
+//   firebase.database().ref('users/' + userId).set({
+//     username: name,
+//     email: email,
+//     profile_picture : imageUrl
+//   });
+// }
 
 
 // The main purpose of this function is to set up a listener (using firebase) for when the auth state changes.

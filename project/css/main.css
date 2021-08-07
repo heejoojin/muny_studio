@@ -49,7 +49,12 @@ a {
 	padding-bottom: 30px;
 }
 
-#google {
+.box1-1-1 {
+	position:relative;
+  	right: 50px;
+}
+
+#google #cart {
     font-family: 'Goudy Bookletter 1911', serif;
     font-size: 18px;
     border-style: none;
@@ -59,8 +64,6 @@ a {
     padding: 10px;
     color: #534b46;
     float: right;
-    position:relative;
-  	right: 50px;
 }
 
 ::-moz-selection {
@@ -236,6 +239,7 @@ button:hover {
 
 #popup-head {
 	text-align: right;
+	padding-right: 30px;
 }
 
 #popup-head a {

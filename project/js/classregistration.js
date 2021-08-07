@@ -21,6 +21,11 @@ function addToCart() {
         var close = document.getElementById('popup-close');   // Get the close button
         close.addEventListener('click', closePopup, false);// Click close-clear note
     }
+
+    if (firebase.auth().currentUser) {
+        count++;
+        $('#cart').html(count);
+    }
 }
 
 // $(document).ready(function() {
