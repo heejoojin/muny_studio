@@ -43,7 +43,6 @@ function addMessage(body, title) {
 function handleMessageFormSubmit() {
   var body = $('#new-post-body').val();
   var title = $('#new-post-title').val();
-
   addMessage(body, title);
 }
 
@@ -60,7 +59,6 @@ function toggleSignIn() {
   } else { // handle logout
     firebase.auth().signOut();
   }
-
   //This disables the button until login or logout is successful
   $('#login-button').attr("disabled", false);
 }
@@ -69,10 +67,14 @@ window.onload = function() {
   firebase.auth().onAuthStateChanged(function(user) {
     var google = document.getElementById('google');
     if (user) {
+      google.style.visibility = 'hidden';
       $('#google').html('<i class="fab fa-google-plus"></i> Sign out');
+      google.style.visibility = 'visible';
       initializeStreamListener();
     } else {
+      google.style.visibility = 'hidden';
       $('#google').html('<i class="fab fa-google-plus"></i> Sign in with Google');
+      google.style.visibility = 'visible';
     }
     $('#google').attr("disabled", false);
   });
