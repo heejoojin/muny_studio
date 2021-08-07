@@ -1,7 +1,7 @@
 var count = 0;
 
 function addToCart() {
-    Create the HTML for the message
+    // Create the HTML for the message
     var msg = '<div class=\"header\"><a id=\"close\" href="#"><h2 id="close">&#10005;<h2></a></div>';
     msg += '<div><h2>This Membership Webpage is Currently Under Construction</h2>';
     msg += 'we are in the process of updating sign&ndash;up and sing&ndash;in functionality!<br/>';
