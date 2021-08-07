@@ -35,7 +35,6 @@ h1 {
 	font-family: 'Sacramento', cursive;
 }
 
-
 a {
 	text-decoration: none;
 	color: #534b46;
@@ -113,10 +112,6 @@ li a:hover {
 	font-size: 20px;
 }
 
-#plus {
-	font-size: 10px;
-}
-
 .home {
 	width: 85%;
 	float: left;
@@ -185,13 +180,12 @@ and fourth value applies to bottom-left corner):*/
 	transition: filter .5s ease-in-out;
 	-webkit-filter: grayscale(0%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
 	filter: grayscale(0%); /* FF 35+ */
-	
-  }
-  .img:hover {
+}
+
+.img:hover {
 	-webkit-filter: opacity(.7);
-  filter: opacity(.7);
-	
-  }
+	filter: opacity(.7);
+}
 
 button:hover {
 	color: white;

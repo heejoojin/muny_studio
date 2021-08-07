@@ -65,22 +65,35 @@ function toggleSignIn() {
   $('#login-button').attr("disabled", false);
 }
 
+window.onload = function() {
+  firebase.auth().onAuthStateChanged(function(user) {
+    var google = document.getElementById('google');
+    if (user) {
+      $('#google').html("Sign out");
+      initializeStreamListener();
+    } else {
+      $('#google').html('<i class="fab fa-google-plus"></i> Sign in with Google');
+    }
+    $('#google').attr("disabled", false);
+  });
+};
+
 // The main purpose of this function is to set up a listener (using firebase) for when the auth state changes.
 // If a user isn't authenticated, we should not show the stream and prompt them to log in.
 // If a use IS authenticated, we should load/show the stream and give them the option to log out.
-window.onload = function() {
-  firebase.auth().onAuthStateChanged(function(user) {
-    if (user) {
-      $('#stream').show();
-      $('#login-button').html("Log out");
-      initializeStreamListener();
-    } else {
-      $('#stream').hide();
-      $('#login-button').html("Log in with google");
-    }
-    $('#login-button').attr("disabled", false);
-  });
-};
+// window.onload = function() {
+//   firebase.auth().onAuthStateChanged(function(user) {
+//     if (user) {
+//       $('#stream').show();
+//       $('#login-button').html("Log out");
+//       initializeStreamListener();
+//     } else {
+//       $('#stream').hide();
+//       $('#login-button').html("Log in with google");
+//     }
+//     $('#login-button').attr("disabled", false);
+//   });
+// };
 
 /*https://deanhume.com/a-basic-guide-to-firebase-for-the-web/*/
 
