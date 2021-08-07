@@ -67,19 +67,20 @@ li, #classdesc {
     font-size: 25px;
 }
 
-button {
+#register {
     font-family: 'Goudy Bookletter 1911', serif;
     font-size: 18px;
     border-style: none;
+    color: #534b46;
     background-color: #ecdece;
     border-radius: 10px;
     padding: 10px;
 }
 
-button:visited {
+#register:visited {
     border-style: none;
 }
-button:focus {
+#register:focus {
     outline: none;
 }
 

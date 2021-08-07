@@ -66,14 +66,12 @@ function toggleSignIn() {
 window.onload = function() {
   firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
-      $('#google').hide();
       $('#google').html('<i class="fab fa-google-plus"></i> Sign out');
-      $('#google').show();
+      $('#google').css('background-color','#ecdece');
       initializeStreamListener();
     } else {
-      $('#google').hide();
       $('#google').html('<i class="fab fa-google-plus"></i> Sign in with Google');
-      $('#google').show();
+      $('#google').css('background-color','#ecdece');
     }
     $('#google').attr("disabled", false);
   });
