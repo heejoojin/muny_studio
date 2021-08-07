@@ -18,16 +18,9 @@ https://www.mudfire.com
 
 body {
 	font-family: 'Goudy Bookletter 1911', serif;
-	
 	color: #534b46;
 	padding: 0;
 	margin: 0;
-	/**background: #648880;
-	background: linear-gradient(90deg, #c9d8c5, #ead9c3);**/
-	/*background: linear-gradient(to right, #c9d8c5 0%,  #c9d8c5 50%, #ead9c3 50%, #ead9c3 100%), linear-gradient(to right,  #c9d8c5 0%,  #c9d8c5 50%, #ead9c3 50%, #ead9c3 100%);
-	background-size: 100% 50%;
-	background-position: center top, center bottom;
-	background-repeat: no-repeat;*/
 	min-width: 1000px;
 	max-width: 100%;
 	margin: 0 auto;
@@ -204,8 +197,6 @@ button:hover {
 	color: white;
 }
 
-
-
 /* ----------------------------------- copyright -----------------------------------  */
 .copyright {
 	width: 100%;
@@ -222,27 +213,4 @@ button:hover {
 	box-sizing: border-box;
 	padding: 10px;
 	text-align: center;
-}
-
-/* ----------------------------------- 599px -----------------------------------  */
-@media (max-width: 599px) {
-
-
-}
-
-/* ----------------------------------- 600px - 767px -----------------------------------  */
-@media (min-width: 600px) and (max-width: 767px) {
-
-}
-
-/* ----------------------------------- 786px -----------------------------------  */
-@media (min-width: 768px) {
-
-}
-
-/* ----------------------------------- 1000px -----------------------------------  */
-@media (min-width: 1000px) {
-
-
-
 }

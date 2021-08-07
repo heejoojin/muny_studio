@@ -1,7 +1,3 @@
-// Welcome!
-
-//Read this file from bottom to top!!
-
 // This function sets up a listener- '.on()' gets called automatically whenever something saved in '/stream/' changes.
 // It's main purpose is to iterate over the stream in the database and add each message to the page.
 function initializeStreamListener() {
