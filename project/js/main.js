@@ -65,16 +65,15 @@ function toggleSignIn() {
 
 window.onload = function() {
   firebase.auth().onAuthStateChanged(function(user) {
-    var google = document.getElementById('google');
     if (user) {
-      google.style.visibility = 'hidden';
+      $('#google').hide();
       $('#google').html('<i class="fab fa-google-plus"></i> Sign out');
-      google.style.visibility = 'visible';
+      $('#google').show();
       initializeStreamListener();
     } else {
-      google.style.visibility = 'hidden';
+      $('#google').hide();
       $('#google').html('<i class="fab fa-google-plus"></i> Sign in with Google');
-      google.style.visibility = 'visible';
+      $('#google').show();
     }
     $('#google').attr("disabled", false);
   });
