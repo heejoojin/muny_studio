@@ -69,10 +69,12 @@ window.onload = function() {
       var name = user.displayName;
       $('#google').html('<i class="fab fa-google-plus"></i> Sign out');
       $('#google').css('background-color','#ecdece');
+      $('#cart').show();
       $('#cart').html('0','#ecdece');
       $('#cart').css('background-color','#ecdece');
       initializeStreamListener();
     } else {
+      $('#cart').hide();
       $('#google').html('<i class="fab fa-google-plus"></i> Sign in with Google');
       $('#google').css('background-color','#ecdece');
     }
