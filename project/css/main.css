@@ -51,7 +51,7 @@ a {
 
 button {
     font-family: 'Goudy Bookletter 1911', serif;
-    font-size: 18px;
+    font-size: 12px;
     border-style: none;
     background-color: #ecdece;
     border-radius: 10px;
@@ -60,7 +60,7 @@ button {
     color: #534b46;
     float: right;
     position:relative;
-  	left: 50px;
+  	right: 50px;
 }
 
 div#myDIV {
