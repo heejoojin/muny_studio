@@ -22,9 +22,9 @@ app.get('/class', function(request, response) {
   response.render('pages/class');
 });
 
-app.get('/membership', function(request, response) {
-  response.render('pages/membership');
-});
+// app.get('/membership', function(request, response) {
+//   response.render('pages/membership');
+// });
 
 app.get('/contact', function(request, response) {
   response.render('pages/contact');

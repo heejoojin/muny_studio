@@ -1,8 +1,6 @@
 // Welcome!
 
-
 //Read this file from bottom to top!!
-
 
 // This function sets up a listener- '.on()' gets called automatically whenever something saved in '/stream/' changes.
 // It's main purpose is to iterate over the stream in the database and add each message to the page.
@@ -44,7 +42,6 @@ function addMessage(body, title) {
   firebase.database().ref('/stream/' + newPostKey).set(postData);
 }
 
-
 // This gets called whenver the form is submitted (check out the index.ejs).
 // Uses jQuery to get the message info and passes it to 'addMessage to actually submit the info to firebase.
 function handleMessageFormSubmit() {
@@ -71,7 +68,6 @@ function toggleSignIn() {
   //This disables the button until login or logout is successful
   $('#login-button').attr("disabled", false);
 }
-
 
 // The main purpose of this function is to set up a listener (using firebase) for when the auth state changes.
 // If a user isn't authenticated, we should not show the stream and prompt them to log in.
