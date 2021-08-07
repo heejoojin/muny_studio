@@ -26,8 +26,8 @@ app.get('/contact', function(request, response) {
   response.render('pages/contact');
 });
 
-app.get('/direction', function(request, response) {
-  response.render('pages/direction');
+app.get('/location', function(request, response) {
+  response.render('pages/location');
 });
 
 app.listen(app.get('port'), function() {
