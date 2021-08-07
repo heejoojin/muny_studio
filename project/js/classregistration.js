@@ -3,7 +3,7 @@ var count = 0;
 function addToCart() {
 
     if (!firebase.auth().currentUser) {
-        var msg = '<div id=\"popup-head\"><a href="#"><h2 id=\"popup-close\"">&#10005;</h2></a></div>';
+        var msg = '<div id=\"popup-head\"><a href=""><h2 id=\"popup-close\"">&#10005;</h2></a></div>';
         msg += '<div><h2>Google log-in is required for class registeration</h2></div>';
 
         var login_request = document.createElement('div');       // Create a new element
@@ -18,7 +18,6 @@ function addToCart() {
         var close_request = document.getElementById('popup-close');   // Get the close button
         close_request.addEventListener('click', closePopUp, false);// Click close-clear note
     }
-
     // if user logged in - update cart
     // if user not logged in - force the user to log in
 }
