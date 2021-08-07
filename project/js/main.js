@@ -69,7 +69,7 @@ window.onload = function() {
   firebase.auth().onAuthStateChanged(function(user) {
     var google = document.getElementById('google');
     if (user) {
-      $('#google').html("Sign out");
+      $('#google').html('<i class="fab fa-google-plus"></i> Sign out');
       initializeStreamListener();
     } else {
       $('#google').html('<i class="fab fa-google-plus"></i> Sign in with Google');

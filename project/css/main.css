@@ -49,7 +49,7 @@ a {
 	padding-bottom: 30px;
 }
 
-button {
+#google {
     font-family: 'Goudy Bookletter 1911', serif;
     font-size: 12px;
     border-style: none;
@@ -61,10 +61,6 @@ button {
     float: right;
     position:relative;
   	right: 50px;
-}
-
-div#myDIV {
-  
 }
 
 ::-moz-selection {
