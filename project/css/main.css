@@ -212,10 +212,11 @@ button:hover {
 	left: 0;
 	margin-left: auto;
 	margin-right: auto;
-	min-width: 1000px;
-	max-width: 100%;
+	min-width: 500px;
+	max-width: 50%;
+	float: center;
 	position: absolute;
-	top: 0;
+	top: 100px;
 	border: 3px dotted #d4bfaa;
 	border-radius: 15px;
 }
@@ -234,9 +235,8 @@ button:hover {
 }
 
 #popup-head {
-  text-align: right;
-  padding: 0;
-  margin: 10px;
+	text-align: right;
+	padding: 10px;
 }
 
 #popup-head a {

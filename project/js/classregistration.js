@@ -5,7 +5,7 @@ function addToCart() {
     
     if (!hasPopped && !firebase.auth().currentUser) {
         hasPopped = true;
-        var msg = '<div id="popup-head"><a id="popup-close" href="#"><h2 style="color: white;">&#10005;<h2></a></div>';
+        var msg = '<div id="popup-head"><a id="popup-close" href=""><h2>&#10005;<h2></a></div>';
         msg += '<div><h2>Google log-in is required for class registeration!</h2>';
         
         var popup = document.createElement('div');       // Create a new element
