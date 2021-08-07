@@ -1,33 +1,30 @@
 <html lang="en">
+
 <head>
-    <% include ../helpers/head %>
-    <link rel="stylesheet" href="css/about.css">
+  <% include ../helpers/head %>
+  <link rel="stylesheet" href="css/about.css">
 </head>
+
 <body class="container">
   <main>
-      <section class="sec1">
-          <div class="box1">
+    <section class="sec1">
+        <div class="box1">
           <div class="menu">
             <% include ../helpers/menu %>
           </div>
           <div class="home">
             <div class="box1-1">
-              <% include ../helpers/title %>
+              <% include ../helpers/home %>
             </div>
-            <div class ="box1-3">
+            <div class ="box1-2">
               <div class="artist"><img src="images/munhee_clear.png" alt=""></div>
               <p>Munhee Kwon is an artist based in Busan, South Korea</p>
+            </div>
           </div>
         </div>
-        </div>
-        </section>
-        <section class="copyright">
-          <div id="cr">
-            <p>Copyright &copy; 2019 Muny Pottery Studio. All rights reserved.</p>
-          </div>
-          <script src="js.js"></script>
-        </section>
+      </section>
+      <% include ../helpers/copright %>
   </main>
-
 </body>
+
 </html>

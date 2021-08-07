@@ -1,8 +1,10 @@
 <html lang="en">
+
 <head>
-    <% include ../helpers/head %>
-    <link rel="stylesheet" href="css/class.css">
+  <% include ../helpers/head %>
+  <link rel="stylesheet" href="css/class.css">
 </head>
+
 <body class="container">
   <main>
     <section class="sec1">
@@ -10,13 +12,12 @@
         <div class="menu">
           <% include ../helpers/menu %>
         </div>
-        
         <div class="home">
           <div class="box1-1">
-            <% include ../helpers/title %>
+            <% include ../helpers/home %>
           </div>
-
-          <div class="box1-3" id="class">
+          
+          <div class="box1-2" id="class">
             <h1 id="title">classes and workshops</h1>
             <ul>
               <li>
@@ -58,24 +59,20 @@
                   <i class="fa fa-heart" id="heart" aria-hidden="true"></i></p>
                   <button id="register"><a href="#box1-2">Register for this Class</a></button>
                 </div>
-            </li>
-          </ul>
-        </div> <!--box1-3-->
+              </li>
+            </ul>
+          </div> 
 
-        <div class="box1-2" id="box1-2">
+          <div class="box1-3">
             <h1><i class="fas fa-chevron-down"></i><br/><br/>registration</h1>
             <p id="registeration"></p>
-        </div>
-      </div> <!--home-->
-    </div> <!--box1-->
-  </section>
-  <script src="js/classregisteration.js"></script>
-  
-  <section class="copyright">
-    <div id="cr">
-      <p>Copyright &copy; 2019 Muny Pottery Studio. All rights reserved.</p>
-    </div>
-  </section>
-</main>
+          </div>
+        </div> 
+      </div> 
+    </section>
+    <script src="js/classregisteration.js"></script>
+    <% include ../helpers/copright %>
+  </main>
 </body>
+
 </html>

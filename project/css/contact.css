@@ -1,0 +1,53 @@
+
+.box1-2 {
+    text-align: center;
+}
+
+input[type='text'], textarea {
+    background-color: #ecdece;
+    font-family: 'Goudy Bookletter 1911', serif;
+    font-size: 18px;
+    width: 80%;
+    max-width: 400px;
+    padding: 4px 6px;
+    border: 2px dotted #d4bfaa;
+    border-radius: 8px;
+    margin: 5px;
+    color: #534b46;
+}
+
+input[type='submit'] {
+    font-family: 'Goudy Bookletter 1911', serif;
+    font-size: 18px;
+    border-style: none;
+    background-color: #ecdece;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding: 10px;
+    color: #534b46;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    background-color: #fff;
+    color: #534b46;
+}
+
+::placeholder {
+  color: #d4bfaa;
+  opacity: 1;
+}
+
+#email {
+    height: 300px;
+}
+
+button:focus {
+    outline: none;
+    background-color: #ecdece;
+}
+
+form {
+    margin: 0;
+    padding: 0;
+}

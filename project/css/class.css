@@ -1,5 +1,4 @@
 
-
 .gallery {
     
     width: 250px;
@@ -85,7 +84,7 @@ button:focus {
     outline: none;
 }
 
-.box1-2 {
+.box1-3 {
 	width: 100%;
 	-moz-box-sizing: border-box;
 	-webkit-box-sizing: border-box;
@@ -134,8 +133,7 @@ button:focus {
 
 /* ----------------------------------- 1000px ----------------------------------- */
 @media (max-width: 1100px) {
-.gallery, .gallery img {
-    width: 200px;
-}
-
+    .gallery, .gallery img {
+        width: 200px;
+    }
 }

@@ -1,98 +1,57 @@
 <html lang="en">
+
 <head>
-    <% include ../helpers/head %>
-    <link rel="stylesheet" href="css/membership.css">
+  <% include ../helpers/head %>
+  <link rel="stylesheet" href="css/contact.css">
 </head>
+
 <body class="container">
   <main>
-      <section class="sec1">
-          <div class="box1">
-          <div class="menu">
-            <% include ../helpers/menu %>
-          </div>
-          <div class="home">
-            <div class="box1-1">
-              <% include ../helpers/title %>
-            </div>
-            <div class ="box1-3">
-              <h1>contact us for answers to all of your questions :)</h1>
-              <br/><br/>
-              <form id="javascript_form">
-                <input type="text" name="subject" placeholder="Subject" />
-                <br/>
-                <textarea name="text" placeholder="Message" id="email"></textarea>
-                <br/>
-                <input type="hidden" name="access_token" value="vidskx7ze3limw1z9be1mirr" />
-                <!-- return urls can be fully qualified -OR-
-                  start with / for root relative -OR-
-                  start with . for url relative --> 
-                <input type="hidden" name="success_url" value=".?message=Email+Successfully+Sent%21&isError=0" />
-                <input type="hidden" name="error_url" value=".?message=Email+could+not+be+sent.&isError=1" />
-                <!-- set the reply-to address -->
-                <input type="text" name="reply_to"
-                        placeholder="Your Email" />
-                <br/>
-
-                <!-- to append extra fields, use the extra_ prefix.
-                Entries will be appended to your message body. -->
-                <!-- <input type="text" name="extra_phone_number"
-                        placeholder="Phone Number" /> -->
-
-                <!-- to split your message into 160 chars
-                  for an sms gateway -->
-                <!-- <input type="hidden"
-                        name="sms_format" value="true" /> -->
-                <input type="submit" id="js_send" value="Send" />
-                <script src="/js/email.js"></script>
-              </form>
-            
-              
-                  <!--<button id="login-button" class="btn btn-default" type="button" onclick="toggleSignIn()">
-                    Sign in to view stream
-                  </button>
-                
-                  <section id="add-post">
-                    <h2 class="mdl-card__title-text">
-                      New Post
-                    </h2>
-                
-                    <form id="message-form" action="#">
-                      <div class="form-group">
-                        <label for="new-post-title">
-                          Post title...
-                        </label>
-                        <input type="text" id="new-post-title">
-                      </div>
-                
-                      <div class="form-group">
-                        <label for="new-post-body">
-                          Post message...
-                        </label>
-                        <textarea rows="3" id="new-post-body"></textarea>
-                      </div>
-                
-                      <button type="submit" class="btn btn-default" onclick="handleMessageFormSubmit()">
-                        Add post
-                      </button>
-                    </form>
-                  </section>
-                
-                  <div>
-                    Stream goes here:
-                    <h2>Account</h2><h2 id="account"></h2>
-                    <h2 id="stream">Comment</h2>
-                  </div>
-          </div>-->
+    <section class="sec1">
+      <div class="box1">
+        <div class="menu">
+          <% include ../helpers/menu %>
         </div>
-        </div>
-        </section>
-        <section class="copyright">
-          <div id="cr">
-            <p>Copyright &copy; 2019 Muny Pottery Studio. All rights reserved.</p>
+        <div class="home">
+          <div class="box1-1">
+            <% include ../helpers/home %>
           </div>
-          <script src="js.js"></script>
-        </section>
+          <div class ="box1-2">
+            <h1>contact us for answers to all of your questions :)</h1>
+            <br/><br/>
+            <form id="javascript_form">
+              <input type="text" name="subject" placeholder="Subject" />
+              <br/>
+              <textarea name="text" placeholder="Message" id="email"></textarea>
+              <br/>
+              <input type="hidden" name="access_token" value="vidskx7ze3limw1z9be1mirr" />
+              <input type="hidden" name="success_url" value=".?message=Email+Successfully+Sent%21&isError=0" />
+              <input type="hidden" name="error_url" value=".?message=Email+could+not+be+sent.&isError=1" />
+              <input type="text" name="reply_to" placeholder="Your Email" />
+              <br/>
+
+              <!-- to append extra fields, use the extra_ prefix.
+              Entries will be appended to your message body. -->
+              <!-- <input type="text" name="extra_phone_number" placeholder="Phone Number" /> -->
+
+              <!-- to split your message into 160 chars for an sms gateway -->
+              <!-- <input type="hidden" name="sms_format" value="true" /> -->
+
+              <input type="submit" value="Send" />
+              <script src="/js/contact.js"></script>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="copyright">
+      <div id="cr">
+        <p>Copyright &copy; 2019 Muny Pottery Studio. All rights reserved.</p>
+      </div>
+      <script src="js.js"></script>
+    </section>
   </main>
-
 </body>
+
 </html>
