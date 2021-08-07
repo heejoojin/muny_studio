@@ -67,7 +67,6 @@ window.onload = function() {
   firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
       var name = user.displayName;
-      // hi name!
       $('#google').html('<i class="fab fa-google-plus"></i> Sign out');
       $('#google').css('background-color','#ecdece');
       initializeStreamListener();
@@ -78,6 +77,15 @@ window.onload = function() {
     $('#google').attr("disabled", false);
   });
 };
+
+function updateCart() {
+  firebase.database().ref('users/' + userId).set({
+    username: name,
+    email: email,
+    profile_picture : imageUrl
+  });
+}
+
 
 // The main purpose of this function is to set up a listener (using firebase) for when the auth state changes.
 // If a user isn't authenticated, we should not show the stream and prompt them to log in.

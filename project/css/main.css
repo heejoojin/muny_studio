@@ -201,6 +201,65 @@ button:hover {
 	color: white;
 }
 
+.popup {
+	color: #534b46;
+	background-color: #665644;
+	opacity: 0.9;
+	/*box-shadow: -3px 3px 6px #000;*/
+	border-style: 
+	padding: 0;
+	padding-bottom: 40px;
+	right: 0;
+	left: 0;
+	margin-left: auto;
+	margin-right: auto;
+	min-width: 1000px;
+	max-width: 100%;
+	position: absolute;
+	top: 0;
+	border: 3px dotted #d4bfaa;
+	border-radius: 15px;
+}
+
+#popup-head + div {
+	/*background: rgb(255, 255, 255);
+	/*background: rgba(255, 255, 255, 1);*/
+	background: white;
+	position: relative;
+	text-align: center;
+	top: 0;
+	color: #534b46;
+	padding: 20px;
+	padding-bottom: 30px;
+	margin: 30px;
+	border: 3px dotted #d4bfaa;
+	border-radius: 15px;
+}
+
+.popup h2 {
+	color: #534b46;
+	padding: 0;
+	margin: 0;
+	margin-bottom: 20px;
+}
+
+.popup a {
+	text-decoration: none;
+	color: #fff;
+}
+
+#popup-head {
+  text-align: right;
+  background-color: #665644;
+  padding: 0;
+  margin: 10px;
+  border-radius: 15px;
+}
+
+#popup-close h2 {
+	color: white;
+}
+
 /* ----------------------------------- copyright -----------------------------------  */
 .copyright {
 	width: 100%;
