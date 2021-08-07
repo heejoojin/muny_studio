@@ -93,42 +93,8 @@ button:focus {
 	margin: 0;
 }
 
-#registeration h1 {
+#registration h1 {
    padding-top: 20px;
-}
-
-/* ----------------------------------- 599px -----------------------------------  */
-/*@media (max-width: 599px) {
-
-    #class li {
-        float: none;
-        width: 80%;
-        margin: auto;
-    }
-
-    button {
-        margin-bottom: 30px;
-    }
-
-    .home {
-        padding-bottom: 0px;
-    }
-}
-
-/* ----------------------------------- 600px - 767px ----------------------------------- 
-@media (min-width: 600px) and (max-width: 767px) {
-    .gallery, .gallery img {
-        width: 100px;
-    }
-
-}
-
-/* ----------------------------------- 786px ----------------------------------- 
-@media (min-width: 768px) {
-.gallery, .gallery img {
-    width: 150px;
-}
-
 }
 
 /* ----------------------------------- 1000px ----------------------------------- */

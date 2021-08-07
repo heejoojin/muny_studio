@@ -1,6 +1,6 @@
-$(".box1-3").hide();
+$(".box1-2").hide();
 $('button').on('click', function () {
-    $(".box1-3").show();
+    $(".box1-2").show();
     var classname = $(this).parent('#classdesc').find("#classname").eq(0);
     var nameclone = classname.clone()
         .css({
