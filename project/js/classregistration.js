@@ -1,23 +1,36 @@
 var count = 0;
 
 function addToCart() {
+    var msg = '<div id=\"popup-head\"><a href=""><h2 id=\"popup-close\"">&#10005;</h2></a></div>';
+    msg += '<div><h2>Google log-in is required for class registeration</h2></div>';
 
-    if (!firebase.auth().currentUser) {
-        var msg = '<div id=\"popup-head\"><a href=""><h2 id=\"popup-close\"">&#10005;</h2></a></div>';
-        msg += '<div><h2>Google log-in is required for class registeration</h2></div>';
+    var login_request = document.createElement('div');       // Create a new element
+    login_request.setAttribute('class', 'popup');                // Add an id of note
+    login_request.innerHTML = msg;                           // Add the message
+    document.body.appendChild(login_request);                // Add it to the page
 
-        var login_request = document.createElement('div');       // Create a new element
-        login_request.setAttribute('class', 'popup');                // Add an id of note
-        login_request.innerHTML = msg;                           // Add the message
-        document.body.appendChild(login_request);                // Add it to the page
-
-        function closePopUp() {                          // Declare function
-          document.body.removeChild(login_request);              // Remove the note
-        }
-
-        var close_request = document.getElementById('popup-close');   // Get the close button
-        close_request.addEventListener('click', closePopUp, false);// Click close-clear note
+    function closePopUp() {                          // Declare function
+      document.body.removeChild(login_request);              // Remove the note
     }
+
+    var close_request = document.getElementById('popup-close');   // Get the close button
+    close_request.addEventListener('click', closePopUp, false);// Click close-clear note
+    // if (!firebase.auth().currentUser) {
+    //     var msg = '<div id=\"popup-head\"><a href=""><h2 id=\"popup-close\"">&#10005;</h2></a></div>';
+    //     msg += '<div><h2>Google log-in is required for class registeration</h2></div>';
+
+    //     var login_request = document.createElement('div');       // Create a new element
+    //     login_request.setAttribute('class', 'popup');                // Add an id of note
+    //     login_request.innerHTML = msg;                           // Add the message
+    //     document.body.appendChild(login_request);                // Add it to the page
+
+    //     function closePopUp() {                          // Declare function
+    //       document.body.removeChild(login_request);              // Remove the note
+    //     }
+
+    //     var close_request = document.getElementById('popup-close');   // Get the close button
+    //     close_request.addEventListener('click', closePopUp, false);// Click close-clear note
+    // }
     // if user logged in - update cart
     // if user not logged in - force the user to log in
 }
