@@ -190,17 +190,16 @@ and fourth value applies to bottom-left corner):*/
 	border-radius: 0px 0px 10px 0px; 
 }
 
-.img {
+.box1-2 img {
 	transition: filter .5s ease-in-out;
 	-webkit-filter: grayscale(0%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
 	filter: grayscale(0%); /* FF 35+ */
 }
 
-.img:hover {
+.box1-2 img:hover {
 	/*-webkit-filter: opacity(.7);
 	filter: opacity(.7);*/
-	transition: scale(2.0);
-	border-radius: 10px 10px 10px 10px; 
+	width: : 50%;
 }
 
 .img_content div{
@@ -224,7 +223,7 @@ and fourth value applies to bottom-left corner):*/
 }
 
 /* Child Text Container */
-.content_img div{
+./*content_img div{
 	position: absolute;
 	bottom: 0;
 	right: 0;
@@ -236,7 +235,7 @@ and fourth value applies to bottom-left corner):*/
 	visibility: hidden;
 	-webkit-transition: visibility 0s, opacity 0.5s linear; 
 	transition: visibility 0s, opacity 0.5s linear;
-}
+}*/
 
 button:hover {
 	color: white;
