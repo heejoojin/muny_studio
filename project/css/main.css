@@ -190,16 +190,17 @@ and fourth value applies to bottom-left corner):*/
 	border-radius: 0px 0px 10px 0px; 
 }
 
-.box1-2 img {
-	/*transition: filter .5s ease-in-out;*/
+.img {
+	transition: filter .5s ease-in-out;
 	-webkit-filter: grayscale(0%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
 	filter: grayscale(0%); /* FF 35+ */
 }
 
-.box1-2 img:hover {
+.img:hover {
 	/*-webkit-filter: opacity(.7);
 	filter: opacity(.7);*/
 	width: : 50%;
+	/*border-radius: 10px 10px 10px 10px; */
 }
 
 /* Child Text Container */
