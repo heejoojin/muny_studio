@@ -90,7 +90,6 @@ window.onload = function() {
 //   });
 // }
 
-
 // The main purpose of this function is to set up a listener (using firebase) for when the auth state changes.
 // If a user isn't authenticated, we should not show the stream and prompt them to log in.
 // If a use IS authenticated, we should load/show the stream and give them the option to log out.
