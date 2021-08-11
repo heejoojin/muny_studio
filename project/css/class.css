@@ -84,15 +84,6 @@ li, #classdesc {
     outline: none;
 }
 
-.box1-3 {
-	width: 100%;
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
-	padding: 50px 0 0 0;
-	margin: 0;
-}
-
 #registration h1 {
    padding-top: 20px;
 }

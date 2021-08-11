@@ -60,7 +60,7 @@ function toggleSignIn() {
     firebase.auth().signOut();
   }
   //This disables the button until login or logout is successful
-  $('#googlen').attr("disabled", false);
+  $('#google').attr("disabled", false);
 }
 
 window.onload = function() {
