@@ -197,10 +197,8 @@ and fourth value applies to bottom-left corner):*/
 }
 
 .img:hover {
-	/*-webkit-filter: opacity(.7);
-	filter: opacity(.7);*/
-	width: : 50%;
-	/*border-radius: 10px 10px 10px 10px; */
+	-webkit-filter: opacity(.7);
+	filter: opacity(.7);
 }
 
 /* Child Text Container */
