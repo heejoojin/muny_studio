@@ -1,4 +1,3 @@
-var count = 0;
 var hasPopped = false;
 
 function addToCart() {
@@ -23,28 +22,30 @@ function addToCart() {
         close.addEventListener('click', closePopup, false);// Click close-clear note
     }
 
+    var local_cart_count = 1;
     if (firebase.auth().currentUser) {
         var user = firebase.auth().currentUser;
-        var userdb = firebase.database().ref(user.email);
+        var userdb = firebase.database().ref('user'/user.email);
 
-        firebase.database().ref(user.email).child('cart_count').get().then((snapshot) => {
+        userdb.on('value', (snapshot)=> {
+            // count = snapshot.val().username
             if (snapshot.exists()) {
-                // console.log(snapshot.val());
-                count = snapshot.val();
+                local_cart_count = snapshot.val().cart_count;
             } else {
-                // console.log("No data available");
                 var newuserdb = userdb.push();
                 newuserdb.set({
                     name: user.displayName,
-                    cart_count: 1
+                    cart_count: local_cart_count
                 });
-                
             }
         });
 
-        count++;
-        const dbref = firebase.database(user.email).ref().update({'cart_count': count});
-        $('#cart').html('<i class="fa fa-shopping-cart"></i>&nbsp;' + dbref.child(user.email).child('cart_count').get());
+        local_cart_count++;
+        userdb.update({
+            cart_count: local_cart_count
+        });
+
+        $('#cart').html('<i class="fa fa-shopping-cart"></i>&nbsp;' + userdb.on('value', (snapshot)=> {snapshot.val().cart_count}));
     }
 }
 
