@@ -26,21 +26,13 @@ function addToCart(class_num) {
 
     
     if (firebase.auth().currentUser) {
+        
         var user = firebase.auth().currentUser;
         var userdb = firebase.database().ref('user/' + user.displayName);
 
         userdb.on('value', (snapshot)=> {
-            if (snapshot.exists()) {
-                local_cart_count = snapshot.val().cart_count;
-                local_class_count = snapshot.val().class[class_num];
-            } else {
-                userdb.push();
-                userdb.set({
-                    email: user.email,
-                    cart_count: 0,
-                    class: {1: 0, 2: 0, 3: 0}
-                });
-            }
+            local_cart_count = snapshot.val().cart_count;
+            local_class_count = snapshot.val().class[class_num];
         });
         
         local_cart_count++;
