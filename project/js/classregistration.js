@@ -25,7 +25,9 @@ function addToCart() {
 
     if (firebase.auth().currentUser) {
         count++;
-        $('#cart').html(count);
+        if (count > 0) {
+            $('#cart').html('<i class="fa fa-shopping-cart"></i>' + '<p>' + count + '</p>');
+        }
     }
 }
 

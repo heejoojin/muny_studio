@@ -84,6 +84,11 @@ li, #classdesc {
     outline: none;
 }
 
+#register:hover {
+    outline: none;
+    color: white;
+}
+
 #registration h1 {
    padding-top: 20px;
 }
