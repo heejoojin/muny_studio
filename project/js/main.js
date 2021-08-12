@@ -20,35 +20,42 @@ function toggleSignIn() {
     }).catch(function(error) {
       console.error("error", error);
     });
-    $('#google').html('<i class="fab fa-google-plus"></i> Sign out');
-    $('#google').css('background-color','#ecdece');
-    $('#cart').show();
-    $('#cart').html('<i class="fa fa-shopping-cart"></i>');
-    $('#cart').css('background-color','#ecdece');
   } else { // handle logout
     firebase.auth().signOut();
-    $('#cart').hide();
-    $('#google').html('<i class="fab fa-google-plus"></i> Sign in with Google');
-    $('#google').css('background-color','#ecdece');
   }
   //This disables the button until login or logout is successful
   $('#google').attr("disabled", false);
 }
 
-// window.onload = function() {
-//   firebase.auth().onAuthStateChanged(function(user) {
-//     if (user) {
-//       $('#google').html('<i class="fab fa-google-plus"></i> Sign out');
-//       $('#google').css('background-color','#ecdece');
-//       $('#cart').show();
-//       $('#cart').html('<i class="fa fa-shopping-cart"></i>');
-//       $('#cart').css('background-color','#ecdece');
-//       initializeStreamListener();
-//     } else {
-//       $('#cart').hide();
-//       $('#google').html('<i class="fab fa-google-plus"></i> Sign in with Google');
-//       $('#google').css('background-color','#ecdece');
-//     }
-//     $('#google').attr("disabled", false);
-//   });
-// };
+window.onload = function() {
+  firebase.auth().onAuthStateChanged(function(user) {
+    if (user) {
+      $('#google').html('<i class="fab fa-google-plus"></i> Sign out');
+      $('#google').css('background-color','#ecdece');
+      $('#cart').show();
+      
+      var user = firebase.auth().currentUser;
+      var userdb = firebase.database().ref('user/' + user.displayName);
+      userdb.on('value', (snapshot)=> {
+          if (snapshot.exists()) {
+              $('#cart').html('<i class="fa fa-shopping-cart"></i>&nbsp;' + snapshot.val().cart_count);
+          } else {
+              userdb.push();
+              userdb.set({
+                  email: user.email,
+                  cart_count: 0,
+                  class: {1: 0, 2: 0, 3: 0}
+              });
+              $('#cart').html('<i class="fa fa-shopping-cart"></i>');
+          }
+      });
+      $('#cart').css('background-color','#ecdece');
+      // initializeStreamListener();
+    } else {
+      $('#cart').hide();
+      $('#google').html('<i class="fab fa-google-plus"></i> Sign in with Google');
+      $('#google').css('background-color','#ecdece');
+    }
+    $('#google').attr("disabled", false);
+  });
+};
