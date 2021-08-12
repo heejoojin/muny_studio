@@ -27,10 +27,12 @@ function addToCart() {
         var user = firebase.auth().currentUser;
         firebase.database().ref().child('user').child(user.displayName).get().then((snapshot) => {
             if (!snapshot.exists()) {
+                firebase.database().ref('user/'+ user.displayName).push();
                 firebase.database().ref('user/'+ user.displayName).set({
                     email: user.email,
                     cart_count: local_cart_count
                 });
+
             } else {
                 local_cart_count = snapshot.val().cart_count;
             }
