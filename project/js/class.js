@@ -27,8 +27,8 @@ function addToCart() {
         var user = firebase.auth().currentUser;
         var userdb = firebase.database().ref('user'/user.displayName);
 
-        // userdb.on('value', (snapshot)=> {
-        firebase.database().ref().child('user').child(user.displayName).get().then((snapshot) => {
+        userdb.on('value', (snapshot)=> {
+        // firebase.database().ref().child('user').child(user.displayName).get().then((snapshot) => {
             // count = snapshot.val().username
             if (snapshot.exists()) {
                 local_cart_count = snapshot.val().cart_count;
