@@ -25,6 +25,7 @@ function addToCart() {
 
     if (firebase.auth().currentUser) {
         var user = firebase.auth().currentUser;
+        var userdb = firebase.database().ref(user.email);
 
         firebase.database().ref(user.email).child('cart_count').get().then((snapshot) => {
             if (snapshot.exists()) {
@@ -32,10 +33,12 @@ function addToCart() {
                 count = snapshot.val();
             } else {
                 // console.log("No data available");
-                firebase.database().ref(user.email).set({
+                var newuserdb = userdb.push();
+                newuserdb.set({
                     name: user.displayName,
                     cart_count: 1
                 });
+                
             }
         });
 
