@@ -1,6 +1,6 @@
 var hasPopped = false;
 
-function addToCart() {
+function addToCart(class_num) {
     
     if (!hasPopped && !firebase.auth().currentUser) {
         hasPopped = true;
@@ -30,16 +30,21 @@ function addToCart() {
         userdb.on('value', (snapshot)=> {
             if (snapshot.exists()) {
                 local_cart_count = snapshot.val().cart_count;
+                console.log(snapshot.val().class);
+                console.log(snapshot.val().class[1]);
+                
             } else {
-                // userdb.push();
+                userdb.push();
                 userdb.set({
                     email: user.email,
-                    cart_count: 0
+                    cart_count: 0,
+                    class : {1: 0, 2: 0, 3: 0}
                 });
             }
         });
         
         local_cart_count++;
+        
         userdb.update({
             cart_count: local_cart_count
         });
@@ -47,28 +52,3 @@ function addToCart() {
         $('#cart').html('<i class="fa fa-shopping-cart"></i>&nbsp;' + local_cart_count);
     }
 }
-
-// $(document).ready(function() {
-//     $('#register').on('click', function() {
-//         counter++;
-//         $('#cart-count').html('counter'); 
-//     })
-// });
-
-// if user logged in - update cart
-// if user not logged in - force the user to log in
-
-
-// $(".box1-2").hide();
-// $('button').on('click', function () {
-//     $(".box1-2").show();
-//     var classname = $(this).parent('#classdesc').find("#classname").eq(0);
-//     var nameclone = classname.clone()
-//         .css({
-//             'font-size':'15px',
-//             'display': 'block',
-//             'text-align': 'center',
-//             'margin': '10px',
-//         }).appendTo($('#registeration'));
-//     /*$("#registerclass").append('<br/>' + nameclone.text());*/
-// });
