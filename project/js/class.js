@@ -1,5 +1,6 @@
 var hasPopped = false;
 var local_cart_count = 0;
+var local_class_count = 0;
 
 function addToCart(class_num) {
     
@@ -31,23 +32,23 @@ function addToCart(class_num) {
         userdb.on('value', (snapshot)=> {
             if (snapshot.exists()) {
                 local_cart_count = snapshot.val().cart_count;
-                console.log(snapshot.val().class);
-                console.log(snapshot.val().class[class_num]);
-                
+                local_class_count = snapshot.val().class[class_num];
             } else {
                 userdb.push();
                 userdb.set({
                     email: user.email,
                     cart_count: 0,
-                    class : {1: 0, 2: 0, 3: 0}
+                    class: {1: 0, 2: 0, 3: 0}
                 });
             }
         });
         
         local_cart_count++;
-        
+        local_class_count++;
+
         userdb.update({
-            cart_count: local_cart_count
+            cart_count: local_cart_count,
+            class: {class_num: local_class_count}
         });
 
         $('#cart').html('<i class="fa fa-shopping-cart"></i>&nbsp;' + local_cart_count);

@@ -20,27 +20,35 @@ function toggleSignIn() {
     }).catch(function(error) {
       console.error("error", error);
     });
+    $('#google').html('<i class="fab fa-google-plus"></i> Sign out');
+    $('#google').css('background-color','#ecdece');
+    $('#cart').show();
+    $('#cart').html('<i class="fa fa-shopping-cart"></i>');
+    $('#cart').css('background-color','#ecdece');
   } else { // handle logout
     firebase.auth().signOut();
+    $('#cart').hide();
+    $('#google').html('<i class="fab fa-google-plus"></i> Sign in with Google');
+    $('#google').css('background-color','#ecdece');
   }
   //This disables the button until login or logout is successful
   $('#google').attr("disabled", false);
 }
 
-window.onload = function() {
-  firebase.auth().onAuthStateChanged(function(user) {
-    if (user) {
-      $('#google').html('<i class="fab fa-google-plus"></i> Sign out');
-      $('#google').css('background-color','#ecdece');
-      $('#cart').show();
-      $('#cart').html('<i class="fa fa-shopping-cart"></i>');
-      $('#cart').css('background-color','#ecdece');
-      initializeStreamListener();
-    } else {
-      $('#cart').hide();
-      $('#google').html('<i class="fab fa-google-plus"></i> Sign in with Google');
-      $('#google').css('background-color','#ecdece');
-    }
-    $('#google').attr("disabled", false);
-  });
-};
+// window.onload = function() {
+//   firebase.auth().onAuthStateChanged(function(user) {
+//     if (user) {
+//       $('#google').html('<i class="fab fa-google-plus"></i> Sign out');
+//       $('#google').css('background-color','#ecdece');
+//       $('#cart').show();
+//       $('#cart').html('<i class="fa fa-shopping-cart"></i>');
+//       $('#cart').css('background-color','#ecdece');
+//       initializeStreamListener();
+//     } else {
+//       $('#cart').hide();
+//       $('#google').html('<i class="fab fa-google-plus"></i> Sign in with Google');
+//       $('#google').css('background-color','#ecdece');
+//     }
+//     $('#google').attr("disabled", false);
+//   });
+// };
