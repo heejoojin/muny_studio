@@ -65,6 +65,7 @@ a {
     padding: 10px;
     color: #534b46;
     float: right;
+	left: 10px;
 }
 
 #google:hover, #cart:hover {
@@ -201,7 +202,6 @@ button:hover {
 	color: #534b46;
 	background-color: #665644;
 	opacity: 0.9;
-	border-style: 
 	padding: 0;
 	padding-bottom: 40px;
 	margin-left: auto;
@@ -212,7 +212,7 @@ button:hover {
 	position: absolute;
 	top: 200px;
 	right: 0;
-	left: 100px;
+	left: 200px;
 	border: 3px dotted #d4bfaa;
 	border-radius: 15px;
 }
