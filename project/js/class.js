@@ -29,15 +29,16 @@ function addToCart() {
 
         userdb.on('value', (snapshot)=> {
             // count = snapshot.val().username
-            if (snapshot.exists()) {
-                local_cart_count = snapshot.val().cart_count;
-            } else {
-                var newuserdb = userdb.push();
-                newuserdb.set({
-                    name: user.displayName,
-                    cart_count: local_cart_count
-                });
-            }
+            // if (snapshot.exists()) {
+            //     local_cart_count = snapshot.val().cart_count;
+            // } else {
+            var newuserdb = userdb.push();
+            newuserdb.set({
+                name: user.displayName,
+                cart_count: local_cart_count
+            });
+            
+            // }
         });
 
         local_cart_count++;
