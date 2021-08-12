@@ -24,10 +24,24 @@ function addToCart() {
     }
 
     if (firebase.auth().currentUser) {
+        var user = firebase.auth().currentUser;
+
+        firebase.database().ref(user.email).child('cart_count').get().then((snapshot) => {
+            if (snapshot.exists()) {
+                // console.log(snapshot.val());
+                count = snapshot.val();
+            } else {
+                // console.log("No data available");
+                firebase.database().ref(user.email).set({
+                    name: user.displayName,
+                    cart_count: 1
+                });
+            }
+        });
+
         count++;
-        if (count > 0) {
-            $('#cart').html('<i class="fa fa-shopping-cart"></i>&nbsp;' + count);
-        }
+        const dbref = firebase.database(user.email).ref().update({'cart_count': count});
+        $('#cart').html('<i class="fa fa-shopping-cart"></i>&nbsp;' + dbref.child(user.email).child('cart_count').get());
     }
 }
 
