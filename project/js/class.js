@@ -27,17 +27,12 @@ function addToCart() {
         var user = firebase.auth().currentUser;
         var userdb = firebase.database().ref('user/' + user.displayName);
 
-        // /user.displayName);
-
         userdb.on('value', (snapshot)=> {
-        // firebase.database().ref().child('user').child(user.displayName).get().then((snapshot) => {
-            // count = snapshot.val().username
             if (snapshot.exists()) {
                 local_cart_count = snapshot.val().cart_count;
             } else {
-                userdb.push();
-
-                firebase.database().ref('user/' + user.displayName).set({
+                // userdb.push();
+                userdb.set({
                     email: user.email,
                     cart_count: 0
                 });
@@ -45,9 +40,9 @@ function addToCart() {
         });
         
         local_cart_count++;
-        // userdb.update({
-        //     cart_count: local_cart_count
-        // });
+        userdb.update({
+            cart_count: local_cart_count
+        });
 
         $('#cart').html('<i class="fa fa-shopping-cart"></i>&nbsp;' + local_cart_count);
     }
