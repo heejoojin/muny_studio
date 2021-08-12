@@ -1,4 +1,5 @@
 var hasPopped = false;
+var local_cart_count = 0;
 
 function addToCart(class_num) {
     
@@ -22,7 +23,7 @@ function addToCart(class_num) {
         close.addEventListener('click', closePopup, false);// Click close-clear note
     }
 
-    var local_cart_count = 0;
+    
     if (firebase.auth().currentUser) {
         var user = firebase.auth().currentUser;
         var userdb = firebase.database().ref('user/' + user.displayName);
@@ -31,7 +32,7 @@ function addToCart(class_num) {
             if (snapshot.exists()) {
                 local_cart_count = snapshot.val().cart_count;
                 console.log(snapshot.val().class);
-                console.log(snapshot.val().class[1]);
+                console.log(snapshot.val().class[class_num]);
                 
             } else {
                 userdb.push();
