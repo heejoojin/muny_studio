@@ -70,7 +70,7 @@ window.onload = function() {
       $('#google').html('<i class="fab fa-google-plus"></i> Sign out');
       $('#google').css('background-color','#ecdece');
       $('#cart').show();
-      $('#cart').html(<i class="fa fa-shopping-cart"></i>);
+      $('#cart').html('<i class="fa fa-shopping-cart"></i>');
       $('#cart').css('background-color','#ecdece');
       initializeStreamListener();
     } else {
