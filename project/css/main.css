@@ -67,6 +67,9 @@ a {
     float: right;
 }
 
+#google:hover, #cart:hover {
+	color: white;
+}
 ::-moz-selection {
    background-color: white;
    color: #8c7963;
@@ -190,15 +193,6 @@ and fourth value applies to bottom-left corner):*/
 	border-radius: 0px 0px 10px 0px; 
 }
 
-.img {
-	/* transition: filter .5s ease-in-out; */
-}
-
-.img:hover {
-	/* -webkit-filter: opacity(.7);
-	filter: opacity(.7); */
-}
-
 button:hover {
 	color: white;
 }
@@ -252,7 +246,6 @@ button:hover {
 	margin: 0;
 	margin-bottom: 20px;
 }
-
 
 */
 

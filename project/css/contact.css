@@ -26,6 +26,10 @@ input[type='submit'] {
     color: #534b46;
 }
 
+input[type='submit']:hover {
+    color: white;
+}
+
 input:focus, textarea:focus {
     outline: none;
     background-color: #fff;
