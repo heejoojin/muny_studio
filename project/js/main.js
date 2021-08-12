@@ -35,6 +35,15 @@ window.onload = function() {
       $('#cart').show();
       $('#cart').html('<i class="fa fa-shopping-cart"></i>');
       $('#cart').css('background-color','#ecdece');
+      var user = firebase.auth().currentUser;
+      var userdb = firebase.database().ref('user');
+      var newuserdb = userdb.push();
+      newuserdb.set({
+          name: user.displayName,
+          email: user.email,
+          cart_count: local_cart_count
+      });
+
       initializeStreamListener();
     } else {
       $('#cart').hide();

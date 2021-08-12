@@ -25,28 +25,23 @@ function addToCart() {
     var local_cart_count = 1;
     if (firebase.auth().currentUser) {
         var user = firebase.auth().currentUser;
-        var userdb = firebase.database().ref('user'/user.email);
-
-        userdb.on('value', (snapshot)=> {
-            // count = snapshot.val().username
-            // if (snapshot.exists()) {
-            //     local_cart_count = snapshot.val().cart_count;
-            // } else {
-            var newuserdb = userdb.push();
-            newuserdb.set({
-                name: user.displayName,
-                cart_count: local_cart_count
-            });
-            
-            // }
+        firebase.database().ref().child('user').child(user.displayName).get().then((snapshot) => {
+            if (!snapshot.exists()) {
+                firebase.database().ref('user/'+ user.displayName).set({
+                    email: user.email,
+                    cart_count: local_cart_count
+                });
+            } else {
+                local_cart_count = snapshot.val().cart_count;
+            }
         });
 
         local_cart_count++;
-        userdb.update({
+        firebase.database().ref('user/'+ user.displayName).update({
             cart_count: local_cart_count
         });
 
-        $('#cart').html('<i class="fa fa-shopping-cart"></i>&nbsp;' + userdb.on('value', (snapshot)=> {snapshot.val().cart_count}));
+        $('#cart').html('<i class="fa fa-shopping-cart"></i>&nbsp;' + local_cart_count);
     }
 }
 
