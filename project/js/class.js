@@ -40,7 +40,7 @@ function addToCart(class_num) {
         var new_userdb = {};
         newuserdb[cart_count] = local_cart_count;
         newuserdb['class'][class_num] = local_class_count;
-
+        console.log(new_userdb);
         userdb.update(new_userdb);
 
         $('#cart').html('<i class="fa fa-shopping-cart"></i>&nbsp;' + local_cart_count);
