@@ -32,10 +32,15 @@ window.onload = function() {
     if (user) {
       $('#google').html('<i class="fab fa-google-plus"></i> Sign out');
       $('#google').css('background-color','#ecdece');
+      $('#cart').show();
+      $('#cart').html('<i class="fa fa-shopping-cart"></i>');
+      $('#cart').css('background-color','#ecdece');
+      
       var user = firebase.auth().currentUser;
       var userdb = firebase.database().ref('user/' + user.displayName);
+      
       userdb.on('value', (snapshot)=> {
-          if (snapshot.exists() && snapshot.val().cart_count != 0) {
+          if (snapshot.exists()) {
               $('#cart').html('<i class="fa fa-shopping-cart"></i>&nbsp;' + snapshot.val().cart_count);
           } else {
               userdb.push();
@@ -44,11 +49,8 @@ window.onload = function() {
                   cart_count: 0,
                   class: {1: 0, 2: 0, 3: 0}
               });
-              $('#cart').html('<i class="fa fa-shopping-cart"></i>');
           }
       });
-      $('#cart').show();
-      $('#cart').css('background-color','#ecdece');
       // initializeStreamListener();
     } else {
       $('#cart').hide();
