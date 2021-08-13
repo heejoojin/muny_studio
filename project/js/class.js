@@ -31,7 +31,7 @@ function addToCart(class_num) {
 
         userdb.on('value', (snapshot)=> {
             local_cart_count = snapshot.val().cart_count;
-            local_class_count = snapshot.val().class[class_num];
+            local_class_count = snapshot.child(class_num).val();
         });
         
         local_cart_count++;
@@ -39,11 +39,10 @@ function addToCart(class_num) {
 
         var new_userdb = {};
         new_userdb['cart_count'] = local_cart_count;
-        new_userdb['class'] = {};
-        new_userdb['class'][class_num] = local_class_count;
+        new_userdb[class_num] = local_class_count;
 
-        console.log(new_userdb);
-        userdb.update(new_userdb);
+        // console.log(new_userdb);
+        // userdb.update(new_userdb);
 
         $('#cart').html('<i class="fa fa-shopping-cart"></i>&nbsp;' + local_cart_count);
     }
