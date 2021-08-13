@@ -24,24 +24,24 @@ function addToCart(class_num) {
         close.addEventListener('click', closePopup, false);// Click close-clear note
     }
 
-    
     if (firebase.auth().currentUser) {
         
         var user = firebase.auth().currentUser;
         var userdb = firebase.database().ref('user/' + user.displayName);
 
         userdb.on('value', (snapshot)=> {
-            local_cart_count = snapshot.val().cart_count;
-            local_class_count = snapshot.val().class[class_num];
+            local_cart_count = snapshot.child('cart_count').val();
+            local_class_count = snapshot.child('class/' + class_num).val();
         });
         
         local_cart_count++;
         local_class_count++;
 
-        userdb.update({
-            cart_count: local_cart_count,
-            class: {class_num: local_class_count}
-        });
+        var new_userdb = {};
+        newuserdb[cart_count] = local_cart_count;
+        newuserdb['class'][class_num] = local_class_count;
+
+        userdb.update(new_userdb);
 
         $('#cart').html('<i class="fa fa-shopping-cart"></i>&nbsp;' + local_cart_count);
     }
