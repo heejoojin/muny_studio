@@ -38,7 +38,7 @@ function addToCart(class_num) {
         local_class_count++;
 
         var new_userdb = {};
-        new_userdb[cart_count] = local_cart_count;
+        new_userdb['cart_count'] = local_cart_count;
         new_userdb['class'][class_num] = local_class_count;
         console.log(new_userdb);
         userdb.update(new_userdb);
