@@ -31,7 +31,7 @@ function addToCart(class_num) {
 
         userdb.on('value', (snapshot)=> {
             local_cart_count = snapshot.val().cart_count;
-            local_class_count = snapshot.child(class_num).val();
+            local_class_count = snapshot.val()[class_num];
         });
         
         local_cart_count++;
