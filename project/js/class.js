@@ -30,7 +30,7 @@ function addToCart(class_num) {
         var userdb = firebase.database().ref('user/' + user.displayName);
 
         userdb.on('value', (snapshot)=> {
-            local_cart_count = snapshot.val().cart_count;
+            local_cart_count = snapshot.val()['cart_count'];
             local_class_count = snapshot.val()[class_num];
         });
         
