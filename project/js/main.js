@@ -38,9 +38,9 @@ window.onload = function() {
       
       var user = firebase.auth().currentUser;
       var userdb = firebase.database().ref('user/' + user.displayName);
-      
+
       userdb.on('value', (snapshot)=> {
-          if (snapshot.exists()) {
+          if (snapshot.exists() && snapshot.val().cart_count != 0) {
               $('#cart').html('<i class="fa fa-shopping-cart"></i>&nbsp;' + snapshot.val().cart_count);
           } else {
               userdb.push();
