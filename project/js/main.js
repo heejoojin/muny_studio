@@ -32,8 +32,6 @@ window.onload = function() {
     if (user) {
       $('#google').html('<i class="fab fa-google-plus"></i> Sign out');
       $('#google').css('background-color','#ecdece');
-      $('#cart').css('background-color','white');
-      $('#cart').show();
       var user = firebase.auth().currentUser;
       var userdb = firebase.database().ref('user/' + user.displayName);
       userdb.on('value', (snapshot)=> {
@@ -49,7 +47,7 @@ window.onload = function() {
               $('#cart').html('<i class="fa fa-shopping-cart"></i>');
           }
       });
-      
+      $('#cart').show();
       $('#cart').css('background-color','#ecdece');
       // initializeStreamListener();
     } else {
