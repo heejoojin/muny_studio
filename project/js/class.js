@@ -4,24 +4,24 @@ var local_class_count = 0;
 
 function addToCart(class_num) {
     
-    if (!hasPopped && !firebase.auth().currentUser) {
+    if (!firebase.auth().currentUser && !hasPopped) {
         hasPopped = true;
 
         var msg = '<div id="popup-head"><a id="popup-close" href=""><h2>&#10005;<h2></a></div>';
         msg += '<div><h2>Google log-in is required for class registeration!</h2>';
         
-        var popup = document.createElement('div');       // Create a new element
-        popup.setAttribute('class', 'popup');                // Add an id of note
-        popup.innerHTML = msg;                           // Add the message
-        document.body.appendChild(popup);                // Add it to the page
+        var popup = document.createElement('div'); // create a new element
+        popup.setAttribute('class', 'popup'); // add a class name to the popup
+        popup.innerHTML = msg; // add the message
+        document.body.appendChild(popup); // add it to the page
 
-        function closePopup() {                          // Declare function
-          document.body.removeChild(popup);              // Remove the note
+        function closePopup() {  // declare function
+          document.body.removeChild(popup); // remove the popup
           hasPopped = false;
         }
 
-        var close = document.getElementById('popup-close');   // Get the close button
-        close.addEventListener('click', closePopup, false);// Click close-clear note
+        var close = document.getElementById('popup-close'); // get the close button
+        close.addEventListener('click', closePopup, false); // click close-clear popup
     }
 
     if (firebase.auth().currentUser) {

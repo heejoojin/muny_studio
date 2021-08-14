@@ -1,4 +1,3 @@
-
 var config = {
   apiKey: 'AIzaSyCPMLCgfULPgsjvVLlQjrBR9-N47b4ktAA',
   authDomain: "database-30dcf.firebaseapp.com",
@@ -30,6 +29,9 @@ function toggleSignIn() {
 window.onload = function() {
   firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
+      if ($('.popup')[0]){
+        $('.popup').remove();
+      }
       $('#google').html('<i class="fab fa-google-plus"></i> Sign out');
       $('#google').css('background-color','#ecdece');
       $('#cart').show();

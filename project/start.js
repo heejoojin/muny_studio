@@ -30,6 +30,10 @@ app.get('/location', function(request, response) {
   response.render('pages/location');
 });
 
+app.get('/cart', function(request, response) {
+  response.render('pages/cart');
+});
+
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
 });
