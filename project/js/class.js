@@ -1,8 +1,9 @@
 var hasPopped = false;
 var local_cart_count = 0;
 var local_class_count = 0;
+var local_price = 0;
 
-function addToCart(class_num) {
+function addToCart(class_num, price) {
     
     if (!firebase.auth().currentUser && !hasPopped) {
         hasPopped = true;
@@ -32,14 +33,17 @@ function addToCart(class_num) {
         userdb.on('value', (snapshot)=> {
             local_cart_count = snapshot.val()['cart_count'];
             local_class_count = snapshot.val()[class_num];
+            local_total_price = snapshot.val()['total_price'];
         });
         
         local_cart_count++;
         local_class_count++;
+        local_total_price += price;
 
         var new_userdb = {};
         new_userdb['cart_count'] = local_cart_count;
         new_userdb[class_num] = local_class_count;
+        new_userdb['total_price'] = local_total_price;
 
         console.log(new_userdb);
         userdb.update(new_userdb);

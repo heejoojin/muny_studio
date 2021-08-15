@@ -40,11 +40,21 @@
   width: 15%;
 }
 
+.checkout {
+  width: 100%;
+  float: right;
+}
+
 .product-price {
   padding-top: 20px;
   float: left;
   width: 15%;
   /* text-align: right; */
+}
+
+#paypal-button {
+  /* width: 15%; */
+  float: right;
 }
 
 #remove-product {
@@ -82,9 +92,4 @@ input:focus {
 ::placeholder {
   color: #d4bfaa;
   opacity: 1;
-}
-
-.checkout {
-  width: 30%;
-  float: right;
 }

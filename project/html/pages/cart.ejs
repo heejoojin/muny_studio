@@ -28,7 +28,7 @@
                   Hand Building Class<br>Start Date: <input type="text" placeholder="mm-dd-yyyy">
                 </div>
                 <div class="product-removal">
-                  <button id="remove-product" onclick="removeFromCart(1)">Remove</button>
+                  <button id="remove-product" onclick="removeFromCart(1, 160.00)">Remove</button>
                 </div>
                 <div class="product-price">160.00</div>
               </div>
@@ -41,7 +41,7 @@
                   Pottery on the Wheel Class<br>Start Date: <input type="text" placeholder="mm-dd-yyyy">
                 </div>
                 <div class="product-removal">
-                  <button id="remove-product" onclick="removeFromCart(2)">Remove</button>
+                  <button id="remove-product" onclick="removeFromCart(2, 200.00)">Remove</button>
                 </div>
                 <div class="product-price">200.00</div>
               </div>
@@ -54,12 +54,14 @@
                   Pottery Date Night<br>Start Date: <input type="text" placeholder="mm-dd-yyyy">
                 </div>
                 <div class="product-removal">
-                  <button id="remove-product" onclick="removeFromCart(3)">Remove</button>
+                  <button id="remove-product" onclick="removeFromCart(3, 30.00)">Remove</button>
                 </div>
                 <div class="product-price">30.00</div>
               </div>
             </div>
-            <div class="checkout" id="paypal-button">
+            <div class="checkout">
+              <div class="product-price" id="total-product-price"></div>
+              <div id="paypal-button"></div>
               <!-- <button id="buy-product">Checkout with <i class="fab fa-google-plus"></i> Google Pay</button> -->
             </div>
           </div>

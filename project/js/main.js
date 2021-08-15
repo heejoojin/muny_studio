@@ -49,6 +49,7 @@ window.onload = function() {
               userdb.set({
                   email: user.email,
                   cart_count: 0,
+                  total_price: 0,
                   1: 0,
                   2: 0,
                   3: 0
