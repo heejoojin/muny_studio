@@ -11,36 +11,34 @@
 }
 
 .product-image {
-  margin: auto;
   float: left;
   width: 20%;
 }
 
 .product-image img {
-  border-radius: 10px;
+  margin:0 auto;
+  border-radius: 5px;
 }
 
 .product-details {
-  margin: auto;
+  padding-top: 10px;
   float: left;
   width: 50%;
 }
 
 .product-removal {
-  margin: auto;
   float: left;
   width: 15%;
 }
 
 .product-total-price {
-  margin: auto;
+  padding-top: 10px;
   float: left;
   width: 15%;
   /* text-align: right; */
 }
 
 #remove-product {
-  margin: auto;
   font-size: 15px;
   background-color: #ecdece;
   /* float: center; */
