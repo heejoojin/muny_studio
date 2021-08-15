@@ -26,6 +26,9 @@
     content: '$';
 }
 
+#product1, #product2, #product3 {
+  visibility: hidden;
+}
 /* .product {
     margin-bottom: 20px;
     padding-bottom: 10px;

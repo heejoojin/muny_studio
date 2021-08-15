@@ -59,7 +59,15 @@ window.onload = function() {
             for (let i = 1; i <= 3; i++) {
                 for (let j = 1; j <= snapshot.val()[i]; j++) {
                     // var msg = '<% include ../helpers/product_in_cart %> ';
-                    $('.product').html('<% include ../helpers/product_in_cart %>');
+                    var id = i;
+                    id = 'product' + i; // convert i to a string
+                    var product = document.getElementById(id);
+
+                    var newid = id + '-' + j
+                    product.setAttribute('id', newid);
+                    document.getElementsByClassName('product').appendChild(product);
+
+                    $('#' + newid).show();
                 }
             }
           }
