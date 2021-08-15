@@ -1,6 +1,10 @@
 
 function removeFromCart(class_num) {
     if (firebase.auth().currentUser) {
+        $('#product1-template').hide();
+        $('#product2-template').hide();
+        $('#product3-template').hide();
+
         var user = firebase.auth().currentUser;
         var userdb = firebase.database().ref('user/' + user.displayName);
 
