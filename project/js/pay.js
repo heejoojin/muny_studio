@@ -3,7 +3,7 @@ paypal.Buttons({
         layout: 'vertical',
         color:  'black',
         shape:  'pill',
-        label:  'paypal',
+        label:  'checkout',
         tagline: 'false',
         size: 'medium'
     },
@@ -17,5 +17,5 @@ paypal.Buttons({
           });
     }
 }).render('#paypal-button');
-
+$('#paypal-button').show();
 

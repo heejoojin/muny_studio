@@ -58,6 +58,7 @@ window.onload = function() {
           
           var curr_window = window.location.pathname;
           if (curr_window.includes("cart") && $('#product')[0]) {
+            $('#paypal-button').hide();
             var product_div = document.getElementById('product');
 
             if (snapshot.val().cart_count == 0) {
