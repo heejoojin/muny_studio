@@ -12,6 +12,8 @@
 .product-image {
   float: left;
   width: 20%;
+  border-radius: 10px;
+  text-align: center;
 }
 
 .product-details {
@@ -40,6 +42,7 @@
 .product-total-price:before, .total-value:before {
   content: '$';
 }
+
 /* .product {
     margin-bottom: 20px;
     padding-bottom: 10px;
