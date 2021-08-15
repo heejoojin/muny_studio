@@ -98,6 +98,4 @@ window.onload = function() {
   });
 };
 
-setTimeout(function(){
-  document.getElementsByTagName('img').style.visibility = 'visible'; 
-}, 1000);
+$('img').attr('style','visibility: visible');
