@@ -16,9 +16,9 @@
 }
 
 .product-image img {
-  margin:0 auto;
   border-radius: 5px;
   float: right;
+  margin-right: 50px;
 }
 
 .product-details {
