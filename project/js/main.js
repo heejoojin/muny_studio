@@ -58,6 +58,11 @@ window.onload = function() {
           
           var curr_window = window.location.pathname;
           if (curr_window.includes("cart") && $('#product')[0]) {
+            
+            $('#product1-template').hide();
+            $('#product2-template').hide();
+            $('#product3-template').hide();
+
             for (let i = 1; i <= 3; i++) {
               
               var id = 'product' + i
