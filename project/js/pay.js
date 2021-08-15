@@ -170,11 +170,7 @@
   function addGooglePayButton() {
     const paymentsClient = getGooglePaymentsClient();
     const button =
-        paymentsClient.createButton(
-            {buttonColor: 'white',
-            buttonType: 'checkout',
-            onClick: onGooglePaymentButtonClicked}
-        );
+        paymentsClient.createButton({onClick: onGooglePaymentButtonClicked});
     document.getElementById('checkout').appendChild(button);
   }
   
