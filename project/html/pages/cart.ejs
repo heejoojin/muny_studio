@@ -75,20 +75,18 @@
                 </div>
                 <div class="product-price">30.00</div>
               </div>
-
-              <!-- <div class="total">
-                <div class="total-item">
-                  <label>Total</label>
-                  <div class="total-value" id="cart-total"></div>
-                </div>
-              </div> -->
-
+              
             </div>
           </div>
         </div>
       </div>
     </section>
     <% include ../helpers/copyright %>
+    <script>
+      $( function() {
+        $("#datepicker").datepicker();
+      } );
+    </script>
     <script src="/js/cart.js"></script>
   </main>
 </body>

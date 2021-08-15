@@ -63,6 +63,7 @@ window.onload = function() {
             if (snapshot.val().cart_count == 0) {
               product_div.innerHTML = '<h1>cart is empty ...</h1>';
             } else {
+
               for (let i = 1; i <= 3; i++) {
               
                 var id = 'product' + i
@@ -75,7 +76,7 @@ window.onload = function() {
                   var product_clone = product_template.cloneNode(true); 
                   product_clone.setAttribute('id', id);
                   product_div.appendChild(product_clone);
-                  // $('#product3').show();
+                  
                 }
               }
             }

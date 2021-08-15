@@ -1,8 +1,3 @@
-
-$(function() {
-    $("#datepicker").datepicker();
-});
-
 function removeFromCart(class_num) {
     if (firebase.auth().currentUser) {
         $('#product1-template').hide();
