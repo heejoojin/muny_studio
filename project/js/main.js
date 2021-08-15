@@ -99,5 +99,5 @@ window.onload = function() {
 };
 
 setTimeout(function(){
-  $('img').show();
+  document.getElementsByTagName('img').style.visibility = 'visible'; 
 }, 1000);
