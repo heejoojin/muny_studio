@@ -19,8 +19,15 @@
           <div class="box1-2">
             
             <h1 id="title">shopping cart</h1>
-            <div class="product" id="product">
 
+            <!-- <div class="prodcut-labels">
+              <label class="product-image">Class</label>
+              <label class="product-details"></label>
+              <label class="product-removal"></label>
+              <label class="product-price">Total</label>
+            </div> -->
+
+            <div class="product" id="product">
               <div id="product1-template">
                 <div class="product-image">
                   <img src="images/handbuilding.png">
@@ -34,7 +41,7 @@
                 <div class="product-removal">
                   <button id="remove-product" onclick="removeFromCart(1)">Remove</button>
                 </div>
-                <div class="product-total-price">160.00</div>
+                <div class="product-price">160.00</div>
               </div>
 
               <div id="product2-template">
@@ -50,7 +57,7 @@
                 <div class="product-removal">
                   <button id="remove-product" onclick="removeFromCart(2)">Remove</button>
                 </div>
-                <div class="product-total-price">200.00</div>
+                <div class="product-price">200.00</div>
               </div>
 
               <div id="product3-template">
@@ -66,12 +73,16 @@
                 <div class="product-removal">
                   <button id="remove-product" onclick="removeFromCart(3)">Remove</button>
                 </div>
-                <div class="product-total-price">30.00</div>
+                <div class="product-price">30.00</div>
               </div>
-              
-              <div>
 
+              <div class="total">
+                <div class="total-item">
+                  <label>Total</label>
+                  <div class="total-value" id="cart-total"></div>
+                </div>
               </div>
+
             </div>
           </div>
         </div>

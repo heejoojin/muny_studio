@@ -11,6 +11,12 @@
   height: 80px;
 }
 
+.product-labels label {
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  border-bottom: 2px dotted #d4bfaa;
+}
+
 .product-image {
   float: left;
   width: 20%;
@@ -34,7 +40,7 @@
   width: 15%;
 }
 
-.product-total-price {
+.product-price {
   padding-top: 20px;
   float: left;
   width: 15%;
@@ -47,7 +53,7 @@
   /* float: center; */
 }
 
-.product-total-price:before, .total-value:before {
+.product-price:before, .total-value:before {
   content: '$';
 }
 
@@ -55,9 +61,10 @@ input[type='text'] {
   background-color: #ecdece;
   font-family: 'Goudy Bookletter 1911', serif;
   font-size: 15px;
-  width: 50%;
+  width: 30%;
   /* padding: 4px 6px; */
   /* border: 2px dotted #d4bfaa; */
+  border-style: none;
   border-radius: 8px;
   /* margin: 5px; */
   color: #534b46;
