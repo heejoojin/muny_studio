@@ -1,25 +1,26 @@
 .product-image {
-    float: left; width: 20%;
+  float: left; width: 20%;
 }
 
 .product-details {
-    float: left; width: 47%;
+  float: left; width: 47%;
 }
 
 .product-price {
-    float: left; width: 12%;
+  float: left; width: 12%;
 }
 
 .product-removal {
-    float: left; width: 9%;
+  font-family: 'Sacramento', cursive;
+  float: left; width: 9%;
 }
 
 .product-total-price {
-    float: left; width: 12%; text-align: right;
+  float: left; width: 12%; text-align: right;
 }
 
 .product .product-price:before, .product .product-total-price:before, .total-value:before {
-    content: '$';
+  content: '$';
 }
 
 #product1, #product2, #product3 {
