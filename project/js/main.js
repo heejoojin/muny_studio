@@ -27,6 +27,12 @@ function toggleSignIn() {
 }
 
 window.onload = function() {
+
+  if ($('#product')[0]) {
+    $('#product1').hide();
+    $('#product2').hide();
+    $('#product3').hide();
+  }
   firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
       if ($('.popup')[0]){
