@@ -59,8 +59,7 @@ window.onload = function() {
             for (let i = 1; i <= 3; i++) {
               var id = i;
               id = 'product' + i; // convert i to a string
-              console.log(id);
-
+              
               for (let j = 1; j <= snapshot.val()[i]; j++) {
                 // var msg = '<% include ../helpers/product_in_cart %> ';
                 var product_div = document.getElementById('product');
@@ -71,7 +70,6 @@ window.onload = function() {
                 product_clone.setAttribute('id', newid);
                 product_div.appendChild(product_clone);
 
-                // $('#' + newid).show();
               }
             }
           }
