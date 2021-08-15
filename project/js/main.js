@@ -26,6 +26,11 @@ function toggleSignIn() {
   $('#google').attr("disabled", false);
 }
 
+function loaded(){
+  document.getElementsByClassName("img").style.visibility = "hidden";
+  document.getElementsByClassName("color").style.visibility = "hidden";
+}
+
 window.onload = function() {
 
   firebase.auth().onAuthStateChanged(function(user) {
