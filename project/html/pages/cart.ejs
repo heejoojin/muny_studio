@@ -59,14 +59,23 @@
                 <div class="product-price">30.00</div>
               </div>
             </div>
-            <div class="checkout">
-              <button id="buy-product">Checkout with <i class="fab fa-google-plus"></i> Google Pay</button>
+            <div class="checkout" id="paypal">
+              <!-- <button id="buy-product">Checkout with <i class="fab fa-google-plus"></i> Google Pay</button> -->
             </div>
           </div>
         </div>
       </div>
     </section>
     <% include ../helpers/copyright %>
+    <script src="https://www.paypal.com/sdk/js?client-id=AbED08r8HOThro8n-jmKA2Bjbp00B3caSHjGf2jEb4NFi-gwrOJW9VHahpnhUCO6kkTa_97FNdLHMnEu&locale=en_US"></script>
+    <script>paypal.Buttons({
+      style: {
+        layout: 'vertical',
+        color:  'blue',
+        shape:  'rect',
+        label:  'paypal'
+      }
+    }).render('#paypal');</script>
     <script src="/js/cart.js"></script>
   </main>
 </body>
