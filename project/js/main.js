@@ -55,17 +55,19 @@ window.onload = function() {
               });
           }
 
-          if ($('.product')[0]) {
+          if ($('#product')[0]) {
             for (let i = 1; i <= 3; i++) {
                 for (let j = 1; j <= snapshot.val()[i]; j++) {
                     // var msg = '<% include ../helpers/product_in_cart %> ';
                     var id = i;
                     id = 'product' + i; // convert i to a string
+
+                    var product_div = document.getElementById('product');
                     var product = document.getElementById(id);
 
                     var newid = id + '-' + j
                     product.setAttribute('id', newid);
-                    document.getElementsByClassName('product').appendChild(product);
+                    product_div.appendChild(product);
 
                     $('#' + newid).show();
                 }
