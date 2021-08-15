@@ -1,14 +1,14 @@
 .product-image {
-  float: left; width: 20%;
+  float: left; width: 10%;
 }
 
 .product-details {
   float: left; width: 47%;
 }
 
-.product-price {
-  float: left; width: 12%;
-}
+/* .product-price {
+  float: left; width: 10%;
+} */
 
 .product-removal {
   font-family: 'Sacramento', cursive;
