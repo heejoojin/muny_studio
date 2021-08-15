@@ -1,7 +1,7 @@
 {
-  "name": "node-js-getting-started",
+  "name": "muny-studio",
   "version": "0.1.5",
-  "description": "A sample Node.js app using Express 4",
+  "description": "Node.js app for Muny Pottery Studio",
   "main": "index.js",
   "scripts": {
     "start": "node project/start.js"
@@ -15,12 +15,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/heroku/node-js-getting-started"
+    "url": "https://github.com/heejoojin/muny_studio"
   },
   "keywords": [
     "node",
-    "heroku",
-    "express"
+    "heroku"
   ],
   "license": "MIT"
 }

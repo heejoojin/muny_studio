@@ -1,8 +1,8 @@
 {
-  "name": "muny",
+  "name": "muny-studio",
   "description": "pottery studio based in Busan, South Korea",
   "repository": "",
   "logo": "",
-  "keywords": ["node", "express", "static"],
+  "keywords": ["node"],
   "image": ""
 }
