@@ -1,6 +1,6 @@
 
 $(function() {
-$("#datepicker").datepicker();
+    $("#datepicker").datepicker();
 });
 
 function removeFromCart(class_num) {
