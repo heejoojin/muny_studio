@@ -57,7 +57,7 @@ window.onload = function() {
 
           if ($('.product')[0]) {
             for (let i = 1; i <= 3; i++) {
-                for (let j = 1; j <= userval[i]; j++) {
+                for (let j = 1; j <= snapshot.val()[i]; j++) {
                     // var msg = '<% include ../helpers/product_in_cart %> ';
                     $('.product').html('<% include ../helpers/product_in_cart %>');
                 }
