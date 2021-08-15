@@ -79,3 +79,8 @@ input:focus {
   color: #d4bfaa;
   opacity: 1;
 }
+
+.checkout {
+  width: 100%;
+  float: right;
+}

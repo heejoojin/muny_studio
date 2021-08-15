@@ -19,24 +19,13 @@
           <div class="box1-2">
             
             <h1 id="title">shopping cart</h1>
-
-            <!-- <div class="prodcut-labels">
-              <label class="product-image">Class</label>
-              <label class="product-details"></label>
-              <label class="product-removal"></label>
-              <label class="product-price">Total</label>
-            </div> -->
-
             <div class="product" id="product">
               <div id="product1-template">
                 <div class="product-image">
                   <img src="images/handbuilding.png">
                 </div>
                 <div class="product-details">
-                  <!-- <div class="product-title"> -->
                   Hand Building Class<br>Start Date: <input type="text" placeholder="mm-dd-yyyy">
-                  <!-- </div> -->
-                  <!-- <p class="product-description">Select Dates</p> -->
                 </div>
                 <div class="product-removal">
                   <button id="remove-product" onclick="removeFromCart(1)">Remove</button>
@@ -49,10 +38,7 @@
                   <img src="images/wheel.png">
                 </div>
                 <div class="product-details">
-                  <!-- <div class="product-title"> -->
                   Pottery on the Wheel Class<br>Start Date: <input type="text" placeholder="mm-dd-yyyy">
-                  <!-- </div> -->
-                  <!-- <p class="product-description">Select Dates</p> -->
                 </div>
                 <div class="product-removal">
                   <button id="remove-product" onclick="removeFromCart(2)">Remove</button>
@@ -65,10 +51,7 @@
                   <img src="images/couple.png">
                 </div>
                 <div class="product-details">
-                  <!-- <div class="product-title"> -->
                   Pottery Date Night<br>Start Date: <input type="text" placeholder="mm-dd-yyyy">
-                  <!-- </div> -->
-                  <!-- <p class="product-description">Select Dates</p> -->
                 </div>
                 <div class="product-removal">
                   <button id="remove-product" onclick="removeFromCart(3)">Remove</button>
@@ -76,15 +59,15 @@
                 <div class="product-price">30.00</div>
               </div>
             </div>
-            <div id="container"></div>
+            <div class="checkout">
+              <button id="buy-product">Checkout with <i class="fab fa-google-plus"></i> Google Pay</button>
+            </div>
           </div>
         </div>
       </div>
     </section>
     <% include ../helpers/copyright %>
     <script src="/js/cart.js"></script>
-    <script async src="https://pay.google.com/gp/p/js/pay.js" onload="onGooglePayLoaded()"></script>
-    <!-- <script src="/js/pay.js"></script> -->
   </main>
 </body>
 
