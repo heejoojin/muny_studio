@@ -10,23 +10,23 @@
 
 .product-image {
   float: left;
-  width: 10%;
+  width: 30%;
 }
 
 .product-details {
   float: left;
-  width: 37%;
+  width: 50%;
 }
 
 .product-removal {
   font-family: 'Sacramento', cursive;
   float: left;
-  width: 9%;
+  width: 10%;
 }
 
 .product-total-price {
   float: left;
-  width: 12%;
+  width: 10%;
   /* text-align: right; */
 }
 
