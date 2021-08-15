@@ -53,6 +53,7 @@ button {
 
 button:hover {
 	color: white;
+	cursor: pointer;
 }
 
 #heart {
