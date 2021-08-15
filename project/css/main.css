@@ -39,6 +39,22 @@ a {
 	color: #534b46;
 }
 
+button {
+    font-family: 'Goudy Bookletter 1911', serif;
+    font-size: 18px;
+    border-style: none;
+    background-color: white;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+    color: #534b46;
+    float: right;
+}
+
+button:hover {
+	color: white;
+}
+
 #heart {
 	font-size: 15px;
 	color: #663333;
@@ -52,18 +68,6 @@ a {
 	float: right;
 	position:relative;
   	right: 50px;
-}
-
-button {
-    font-family: 'Goudy Bookletter 1911', serif;
-    font-size: 18px;
-    border-style: none;
-    background-color: white;
-    border-radius: 10px;
-    margin: 10px;
-    padding: 10px;
-    color: #534b46;
-    float: right;
 }
 
 ::-moz-selection {
@@ -120,7 +124,6 @@ li a:hover {
 }
 
 .menu li {
-	
 	font-size: 20px;
 }
 
@@ -186,10 +189,6 @@ and fourth value applies to bottom-left corner):*/
 
 #bottomright {
 	border-radius: 0px 0px 10px 0px; 
-}
-
-button:hover {
-	color: white;
 }
 
 .popup {

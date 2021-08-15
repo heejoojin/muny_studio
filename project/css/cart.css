@@ -10,12 +10,12 @@
 
 .product-image {
   float: left;
-  width: 30%;
+  width: 20%;
 }
 
 .product-details {
   float: left;
-  width: 50%;
+  width: 60%;
 }
 
 .product-removal {
@@ -24,12 +24,15 @@
 }
 
 #remove-product {
-  font-size: 12px;
+  font-size: 15px;
+  background-color: #ecdece;
+  float: center;
 }
+
 .product-total-price {
   float: left;
   width: 10%;
-  /* text-align: right; */
+  text-align: right;
 }
 
 .product-total-price:before, .total-value:before {
