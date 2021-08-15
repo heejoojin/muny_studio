@@ -28,8 +28,6 @@ function toggleSignIn() {
 
 window.onload = function() {
 
-  $('img').hide();
-
   firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
       if ($('.popup')[0]){
@@ -102,4 +100,4 @@ window.onload = function() {
 
 setTimeout(function(){
   $('img').show();
-}, 2000);
+}, 1000);
