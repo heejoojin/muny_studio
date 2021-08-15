@@ -19,11 +19,13 @@
 }
 
 .product-removal {
-  font-family: 'Sacramento', cursive;
   float: left;
   width: 10%;
 }
 
+#remove-product {
+  font-size: 12px;
+}
 .product-total-price {
   float: left;
   width: 10%;

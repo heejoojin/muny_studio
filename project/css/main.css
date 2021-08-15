@@ -54,7 +54,7 @@ a {
   	right: 50px;
 }
 
-#google, #cart {
+button {
     font-family: 'Goudy Bookletter 1911', serif;
     font-size: 18px;
     border-style: none;
@@ -66,9 +66,6 @@ a {
     float: right;
 }
 
-#google:hover, #cart:hover {
-	color: white;
-}
 ::-moz-selection {
    background-color: white;
    color: #8c7963;
