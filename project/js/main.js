@@ -27,8 +27,8 @@ function toggleSignIn() {
 }
 
 function loaded(){
-  document.getElementsByClassName("img").style.visibility = "hidden";
-  document.getElementsByClassName("color").style.visibility = "hidden";
+  $(".img").hide();
+  $(".color").hide();
 }
 
 window.onload = function() {
