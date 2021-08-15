@@ -64,19 +64,24 @@ window.onload = function() {
           
           var curr_window = window.location.pathname;
           if (curr_window.includes("cart") && $('#product')[0]) {
-            for (let i = 1; i <= 3; i++) {
-              
-              var id = 'product' + i
-              var template_id = id + '-template'; // convert i to a string
-              
-              for (let j = 1; j <= snapshot.val()[i]; j++) {
-                // var msg = '<% include ../helpers/product_in_cart %> ';
-                var product_div = document.getElementById('product');
-                var product_template = document.getElementById(template_id);
-                var product_clone = product_template.cloneNode(true); 
-                product_clone.setAttribute('id', id);
-                product_div.appendChild(product_clone);
 
+            if (snapshot.val().cart_count == 0) {
+              empty_cart = document.getElementById('product');
+              empty_cart.innerHTML = '<h1 id="empty_cart">cart is empty ...</h1>'; // add the message
+            } else {
+              for (let i = 1; i <= 3; i++) {
+  
+                var id = 'product' + i
+                var template_id = id + '-template'; // convert i to a string
+                
+                for (let j = 1; j <= snapshot.val()[i]; j++) {
+                  var product_div = document.getElementById('product');
+                  var product_template = document.getElementById(template_id);
+                  var product_clone = product_template.cloneNode(true); 
+                  product_clone.setAttribute('id', id);
+                  product_div.appendChild(product_clone);
+                  // $('#' + id).show();
+                }
               }
             }
           }

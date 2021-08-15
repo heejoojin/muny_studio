@@ -50,7 +50,6 @@ function toParams(data_js) {
     for ( var key in data_js ) {
         form_data.push(encodeURIComponent(key) + "=" + encodeURIComponent(data_js[key]));
     }
-
     return form_data.join("&");
 }
 
