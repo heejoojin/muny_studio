@@ -53,6 +53,10 @@
   /* float: center; */
 }
 
+#buy-product {
+  background-color: #ecdece;
+}
+
 .product-price:before {
   content: '$';
 }
