@@ -22,7 +22,7 @@
 }
 
 .product-details {
-  padding-top: 10px;
+  padding-top: 20px;
   float: left;
   width: 50%;
 }
@@ -33,7 +33,7 @@
 }
 
 .product-total-price {
-  padding-top: 10px;
+  padding-top: 20px;
   float: left;
   width: 15%;
   /* text-align: right; */
