@@ -29,10 +29,11 @@ function toggleSignIn() {
 window.onload = function() {
 
   if ($('#product')[0]) {
-    $('#product1').hide();
-    $('#product2').hide();
-    $('#product3').hide();
+    $('#product1-template').hide();
+    $('#product2-template').hide();
+    $('#product3-template').hide();
   }
+
   firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
       if ($('.popup')[0]){
