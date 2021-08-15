@@ -27,7 +27,6 @@ function toggleSignIn() {
 }
 
 window.onload = function() {
-  $('img').hide();
   firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
       if ($('.popup')[0]){
@@ -96,5 +95,4 @@ window.onload = function() {
     }
     $('#google').attr("disabled", false);
   });
-  $('img').show();
 };
