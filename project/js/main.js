@@ -54,8 +54,9 @@ window.onload = function() {
                   3: 0
               });
           }
-
-          if ($('#product')[0]) {
+          
+          var curr_window = window.location.pathname;
+          if (curr_window.includes("cart") && $('#product')[0]) {
             for (let i = 1; i <= 3; i++) {
               
               var id = 'product' + i
