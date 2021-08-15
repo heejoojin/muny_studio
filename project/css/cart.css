@@ -1,4 +1,8 @@
-.product div {
+#product1-template, #product2-template, #product3-template {
+  display: none;
+}
+
+#product1, #product2, #product3 {
   /* float: center; */
   text-align: center;
   width: 100%;
@@ -28,10 +32,6 @@
 
 .product-total-price:before, .total-value:before {
   content: '$';
-}
-
-#product1, #product2, #product3 {
-  display: none;
 }
 /* .product {
     margin-bottom: 20px;

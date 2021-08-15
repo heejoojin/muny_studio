@@ -57,17 +57,16 @@ window.onload = function() {
 
           if ($('#product')[0]) {
             for (let i = 1; i <= 3; i++) {
-              var id = i;
-              id = 'product' + i; // convert i to a string
+              
+              var id = 'product' + i
+              var template_id = id + '-template'; // convert i to a string
               
               for (let j = 1; j <= snapshot.val()[i]; j++) {
                 // var msg = '<% include ../helpers/product_in_cart %> ';
                 var product_div = document.getElementById('product');
-                var product_og = document.getElementById(id);
-                var product_clone = product_og.cloneNode(true); 
-
-                var newid = id + '-' + j
-                product_clone.setAttribute('id', newid);
+                var product_template = document.getElementById(template_id);
+                var product_clone = product_template.cloneNode(true); 
+                product_clone.setAttribute('id', id);
                 product_div.appendChild(product_clone);
 
               }
