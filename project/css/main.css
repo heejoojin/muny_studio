@@ -167,10 +167,6 @@ and fourth value applies to bottom-left corner):*/
 	display: block;
 }
 
-.img, .color {
-	visibility: hidden;
-}
-
 .box1-3 {
 	width: 100%;
 	-moz-box-sizing: border-box;
