@@ -75,6 +75,10 @@ input:focus {
   color: #534b46;
 }
 
+::placeholder {
+  color: #d4bfaa;
+  opacity: 1;
+}
 
 /* .product {
     margin-bottom: 20px;
