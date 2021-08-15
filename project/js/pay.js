@@ -17,5 +17,4 @@ paypal.Buttons({
           });
     }
 }).render('#paypal-button');
-$('#paypal-button').show();
 
