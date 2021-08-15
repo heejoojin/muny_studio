@@ -32,7 +32,7 @@
 #remove-product {
   font-size: 15px;
   background-color: #ecdece;
-  float: center;
+  /* float: center; */
 }
 
 .product-total-price:before, .total-value:before {
