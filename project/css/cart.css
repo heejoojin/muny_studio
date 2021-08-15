@@ -1,5 +1,6 @@
 .product div {
-  float: center;
+  /* float: center; */
+  text-align: center;
   width: 100%;
 }
 
@@ -10,7 +11,7 @@
 
 .product-details {
   float: left;
-  width: 47%;
+  width: 37%;
 }
 
 .product-removal {
@@ -22,7 +23,7 @@
 .product-total-price {
   float: left;
   width: 12%;
-  text-align: right;
+  /* text-align: right; */
 }
 
 .product-total-price:before, .total-value:before {
@@ -30,7 +31,7 @@
 }
 
 #product1, #product2, #product3 {
-  visibility: hidden;
+  display: none;
 }
 /* .product {
     margin-bottom: 20px;
