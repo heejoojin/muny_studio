@@ -1,5 +1,6 @@
 #product1-template, #product2-template, #product3-template {
   display: none;
+  visibility: hidden;
 }
 
 #product1, #product2, #product3 {
