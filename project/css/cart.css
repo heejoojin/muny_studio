@@ -70,6 +70,11 @@ input[type='text'] {
   color: #534b46;
 }
 
+input:focus {
+  outline: none;
+  color: #534b46;
+}
+
 /* .product {
     margin-bottom: 20px;
     padding-bottom: 10px;
