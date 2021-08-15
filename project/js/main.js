@@ -26,7 +26,7 @@ function toggleSignIn() {
   $('#google').attr("disabled", false);
 }
 
-window.addEventListener('load', function() {
+window.onload = function() {
   firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
       if ($('.popup')[0]){
