@@ -58,7 +58,7 @@ window.onload = function() {
           
           var curr_window = window.location.pathname;
           if (curr_window.includes("cart") && $('#product')[0]) {
-            
+
             $('#product1-template').hide();
             $('#product2-template').hide();
             $('#product3-template').hide();
@@ -75,6 +75,7 @@ window.onload = function() {
                 var product_clone = product_template.cloneNode(true); 
                 product_clone.setAttribute('id', id);
                 product_div.appendChild(product_clone);
+                $('#product3').show();
 
               }
             }
