@@ -76,10 +76,14 @@ window.onload = function() {
       // initializeStreamListener();
       
     } else {
+      var curr_window = window.location.pathname;
+      if (curr_window.includes("cart")) {
+        window.location.href = "/";
+      }
       $('#cart').hide();
       $('#google').html('<i class="fab fa-google-plus"></i> Sign in with Google');
       $('#google').css('background-color','#ecdece');
-      document.location.href = "/";
+      
     }
     $('#google').attr("disabled", false);
   });
