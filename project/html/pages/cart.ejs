@@ -83,7 +83,8 @@
     </section>
     <% include ../helpers/copyright %>
     <script src="/js/cart.js"></script>
-    <script src="/js/pay.js"></script>
+    <script async src="https://pay.google.com/gp/p/js/pay.js" onload="onGooglePayLoaded()"></script>
+    <!-- <script src="/js/pay.js"></script> -->
   </main>
 </body>
 
