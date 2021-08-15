@@ -7,8 +7,9 @@ window.onload = function() {
 
         userdb.on('value', (snapshot)=> {
             var userval = snapshot.val();
+            console.log(userval);
             for (let i = 1; i <= 3; i++) {
-                for (let j = 1; i <= userval[i]; j++) {
+                for (let j = 1; j <= userval[i]; j++) {
                     // var msg = '<% include ../helpers/product_in_cart %> ';
                     $('.product').html('<% include ../helpers/product_in_cart %>');
                 }
