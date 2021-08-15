@@ -71,7 +71,7 @@ window.onload = function() {
                 product_clone.setAttribute('id', newid);
                 product_div.appendChild(product_clone);
 
-                $('#' + newid).show();
+                // $('#' + newid).show();
               }
             }
           }
