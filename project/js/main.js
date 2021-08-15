@@ -58,25 +58,25 @@ window.onload = function() {
           
           var curr_window = window.location.pathname;
           if (curr_window.includes("cart") && $('#product')[0]) {
+            var product_div = document.getElementById('product');
 
-            // $('#product1-template').hide();
-            // $('#product2-template').hide();
-            // $('#product3-template').hide();
-
-            for (let i = 1; i <= 3; i++) {
+            if (snapshot.val().cart_count == 0) {
+              product_div.innerHTML = '<h1>cart is empty ...</h1>';
+            } else {
+              for (let i = 1; i <= 3; i++) {
               
-              var id = 'product' + i
-              var template_id = id + '-template'; // convert i to a string
-              
-              for (let j = 1; j <= snapshot.val()[i]; j++) {
-                // var msg = '<% include ../helpers/product_in_cart %> ';
-                var product_div = document.getElementById('product');
-                var product_template = document.getElementById(template_id);
-                var product_clone = product_template.cloneNode(true); 
-                product_clone.setAttribute('id', id);
-                product_div.appendChild(product_clone);
-                // $('#product3').show();
-
+                var id = 'product' + i
+                var template_id = id + '-template'; // convert i to a string
+                
+                for (let j = 1; j <= snapshot.val()[i]; j++) {
+                  // var msg = '<% include ../helpers/product_in_cart %> ';
+                  // var product_div = document.getElementById('product');
+                  var product_template = document.getElementById(template_id);
+                  var product_clone = product_template.cloneNode(true); 
+                  product_clone.setAttribute('id', id);
+                  product_div.appendChild(product_clone);
+                  // $('#product3').show();
+                }
               }
             }
           }
