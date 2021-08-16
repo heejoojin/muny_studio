@@ -61,6 +61,7 @@ window.onload = function() {
             var product_div = document.getElementById('product');
 
             if (snapshot.val().cart_count == 0) {
+              $('#paypal-button').hide();
               product_div.innerHTML = '<h1>cart is empty ...</h1>';
             } else {
 
@@ -91,7 +92,7 @@ window.onload = function() {
       if (curr_window.includes("cart")) {
         window.location.href = "/";
       }
-      $('#paypal-button').hide();
+      
       $('#cart').hide();
       $('#google').html('<i class="fab fa-google-plus"></i> Sign in with Google');
       $('#google').css('background-color','#ecdece');
