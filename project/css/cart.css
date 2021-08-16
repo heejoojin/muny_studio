@@ -46,7 +46,7 @@
   width: 15%;
 }
 
-.checkout {
+.checkout, .paypal-checkout {
   width: 100%;
   float: right;
   text-align: right;
