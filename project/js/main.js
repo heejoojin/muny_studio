@@ -80,6 +80,7 @@ window.onload = function() {
                 }
               }
               $('.total-product-price').html('<h1 style="text-align: right;">total</h1>' + '$' + snapshot.val()['total_price']);
+              $('#paypal-price').html(snapshot.val()['total_price']);
             }
           }
       });

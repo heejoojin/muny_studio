@@ -1,5 +1,3 @@
-var user = firebase.auth().currentUser;
-var total_price = firebase.database().ref('user/' + user.displayName);
 
 setTimeout(function() {
     paypal.Buttons({
@@ -14,7 +12,7 @@ setTimeout(function() {
             return actions.order.create({
                 purchase_units: [{
                   amount: {
-                    value: total_price
+                    value: $('#paypal-price').text()
                   }
                 }]
               });
