@@ -67,14 +67,8 @@
   background-color: #ecdece;
 }
 
-.product-price:before {
+.product-price:before, .total-product-price:before{
   content: '$';
-}
-
-.total-product-price:before {
-  content: 'Total ';
-	font-size: 35px;
-	font-family: 'Sacramento', cursive;
 }
 
 input[type='text'] {
