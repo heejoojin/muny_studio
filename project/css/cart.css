@@ -50,13 +50,18 @@
   width: 100%
 }
 
-.total-product-price, #paypal-button {
+.total-product-price {
   width: 30%;
   float: right;
   text-align: right;
   font-size: 18px;
   padding-top: 20px;
   padding-bottom: 20px;
+}
+
+#paypal-button {
+  width: 100%;
+  float: right;
 }
 
 #remove-product {
