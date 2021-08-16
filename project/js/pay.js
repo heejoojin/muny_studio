@@ -1,5 +1,5 @@
 var user = firebase.auth().currentUser;
-var total_price = firebase.database().ref('user/' + user.displayName + '/total_price');
+var total_price = firebase.database().ref('user/' + user.displayName);
 
 setTimeout(function() {
     paypal.Buttons({
