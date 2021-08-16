@@ -52,7 +52,7 @@
   /* text-align: right; */
 }
 
-#paypal-button {
+#paypal-button, #total-product-price {
   /* width: 15%; */
   float: right;
 }
