@@ -7,7 +7,7 @@ setTimeout(function() {
             shape:  'pill',
             label:  'checkout',
             tagline: 'false',
-            size: 'small'
+            size: 'responsive'
         },
         createOrder:function(data, actions) {
             return actions.order.create({
