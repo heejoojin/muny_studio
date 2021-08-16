@@ -5,15 +5,13 @@ setTimeout(function() {
             color:  'black',
             shape:  'pill',
             label:  'checkout',
-            tagline: 'false',
+            tagline: 'false'
         },
         createOrder: function (data, actions) {
-            // var total_price = $('.total-product-price').text();
-            // console.log(value);
             return actions.order.create({
                 purchase_units: [{
                   amount: {
-                    value: 160.00
+                    value: '160.00'
                   }
                 }]
               });
