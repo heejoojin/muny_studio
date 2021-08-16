@@ -66,7 +66,8 @@
 
 #paypal-button {
   width: 15%;
-  float: left;
+  float: right;
+  margin-right: 100px;
 }
 
 #remove-product {
