@@ -79,7 +79,7 @@ window.onload = function() {
                   
                 }
               }
-              $('.total-product-price').html(snapshot.val()['total_price']);
+              $('.total-product-price').html('$' + snapshot.val()['total_price']);
             }
           }
       });
