@@ -49,6 +49,7 @@
 .checkout {
   width: 100%;
   float: right;
+  text-align: right;
 }
 
 .total-product-price {
