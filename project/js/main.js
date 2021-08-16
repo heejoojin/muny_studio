@@ -91,6 +91,7 @@ window.onload = function() {
       if (curr_window.includes("cart")) {
         window.location.href = "/";
       }
+      $('#paypal-button').hide();
       $('#cart').hide();
       $('#google').html('<i class="fab fa-google-plus"></i> Sign in with Google');
       $('#google').css('background-color','#ecdece');
