@@ -43,7 +43,7 @@ window.onload = function() {
 
       userdb.on('value', (snapshot)=> {
           if (snapshot.exists() && snapshot.val().cart_count != 0) {
-              $('#cart').html('<i class="fa fa-shopping-cart"></i>&nbsp;' + snapshot.val().cart_count);
+              $('#cart').html('<i class="fa fa-shopping-cart"></i>&nbsp;' + snapshot.val()['cart_count']);
           } else {
               userdb.push();
               userdb.set({
@@ -79,6 +79,7 @@ window.onload = function() {
                   
                 }
               }
+              $('.total-product-price').html(snapshot.val()['total_price']);
             }
           }
       });

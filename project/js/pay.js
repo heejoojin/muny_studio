@@ -9,10 +9,12 @@ setTimeout(function() {
             size: 'medium'
         },
         createOrder: function (data, actions) {
+            var total_price = $('.total-product-price').text();
+            console.log(value);
             return actions.order.create({
                 purchase_units: [{
                   amount: {
-                    value: '160.00'
+                    value: total_price
                   }
                 }]
               });

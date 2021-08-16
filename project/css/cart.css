@@ -40,21 +40,16 @@
   width: 15%;
 }
 
-.checkout {
-  width: 100%;
-  float: right;
-}
-
 .product-price {
   padding-top: 20px;
   float: left;
   width: 15%;
-  /* text-align: right; */
 }
 
-#paypal-button, #total-product-price {
-  /* width: 15%; */
+.total-product-price, #paypal-button {
+  width: 100%;
   float: right;
+  font-size: 18px;
 }
 
 #remove-product {
@@ -69,6 +64,10 @@
 
 .product-price:before {
   content: '$';
+}
+
+.total-product-price:before {
+  content: 'Total: $';
 }
 
 input[type='text'] {
