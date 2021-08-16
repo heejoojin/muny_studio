@@ -19,6 +19,18 @@ setTimeout(function() {
               });
         },
         onApprove:function(data, actions) {
+            var user = firebase.auth().currentUser;
+            var userdb = firebase.database().ref('user/' + user.displayName);
+            // userdb.push();
+            userdb.set({
+                email: user.email,
+                cart_count: 0,
+                total_price: 0,
+                1: 0,
+                2: 0,
+                3: 0
+            });
+
             return actions.order.capture().then(function(detail) {
                 console.log(detail);
                 window.location.href = "/";
